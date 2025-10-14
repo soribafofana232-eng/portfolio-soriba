@@ -55,7 +55,7 @@ export default function Realisations() {
         "Site personnel déployé sur domaine public avec React et Tailwind.",
       techno: ["React", "Tailwind", "Netlify", "Vite"],
       details: [
-        "Développement de A à Z du portfolio sur fofana.soriba.com, hébergement, SEO de base, responsive design, organisation des fichiers en composants clairs.",
+        "Développement de A à Z du portfolio sur https://portfollio-soriba.netlify.app/, hébergement, SEO de base, responsive design, organisation des fichiers en composants clairs.",
       ],
     },
   ];
