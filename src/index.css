@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  margin-left: 16rem; /* pour libérer la place de la barre latérale */
+  padding: 2rem;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
