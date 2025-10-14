@@ -46,6 +46,16 @@ export default function Profil() {
 
       {/* --- CONTENU --- */}
       <div className="z-10 text-center px-6 max-w-2xl">
+        {/* --- PHOTO --- */}
+        <motion.img
+          src="/soriba.jpg"
+          alt="Photo de Soriba Fofana"
+          className="w-40 h-40 object-cover rounded-full mx-auto mb-6 border-4 border-indigo-400 shadow-lg"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+
         <motion.h1
           className="text-6xl md:text-7xl font-extrabold text-indigo-300 mb-4"
           initial={{ opacity: 0, y: -40 }}

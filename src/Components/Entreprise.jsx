@@ -30,10 +30,11 @@ export default function Entreprise() {
           </button>
         </div>
 
+        {/* 🔹 Ta photo locale */}
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Save_Store_logo.png/120px-Save_Store_logo.png"
+          src="/save.jpg"
           alt="Save La Défense"
-          className="w-40 h-40 object-contain mt-6 md:mt-0"
+          className="w-40 h-40 object-cover rounded-xl mt-6 md:mt-0 shadow-md border border-gray-200"
         />
       </div>
 
@@ -47,10 +48,11 @@ export default function Entreprise() {
             className="bg-white rounded-xl shadow-2xl w-11/12 md:w-3/4 lg:w-1/2 overflow-hidden"
           >
             <div className="relative">
+              {/* 🔹 Même photo dans la modale */}
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Save_Store_logo.png/800px-Save_Store_logo.png"
-                alt="Save"
-                className="w-full h-48 object-contain bg-gray-100"
+                src="/save.jpg"
+                alt="Save La Défense"
+                className="w-full h-64 object-cover bg-gray-100"
               />
               <button
                 onClick={() => setShowModal(false)}
@@ -82,18 +84,18 @@ export default function Entreprise() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                     <h5 className="text-blue-700 font-medium">
-                      Gérer le patrimoine informatique
+                      Maintenance et assistance technique
                     </h5>
                     <p className="text-gray-600 text-sm">
-                      Maintenance et diagnostic de smartphones, tablettes et ordinateurs.
+                      Diagnostic, démontage et réparation de smartphones, tablettes et ordinateurs.
                     </p>
                   </div>
                   <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                     <h5 className="text-blue-700 font-medium">
-                      Mettre à disposition un service informatique
+                      Service et support informatique
                     </h5>
                     <p className="text-gray-600 text-sm">
-                      Réparation, installation et suivi technique des appareils.
+                      Réparation, installation et suivi technique des appareils pour les clients.
                     </p>
                   </div>
                 </div>
@@ -104,7 +106,7 @@ export default function Entreprise() {
                   Technologies utilisées
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {["GSX ou Apple Configurator", "GSPN (Galaxy Diagnostic)", "Trepidai", "Picea Soft"].map(
+                  {["GSX (Apple)", "GSPN (Samsung)", "Trepidai", "Picea Soft"].map(
                     (tech, i) => (
                       <span
                         key={i}

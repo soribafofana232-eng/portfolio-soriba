@@ -6,7 +6,7 @@ export default function Navbar() {
       {/* --- Haut : Infos utilisateur --- */}
       <div className="flex flex-col items-center text-center">
         <motion.img
-          src="/photo_profil.png"
+          src="/soriba.jpg"  // 👈 utilise la même image que dans Profil
           alt="Soriba Fofana"
           className="w-28 h-28 rounded-full border-4 border-indigo-400 shadow-lg object-cover"
           initial={{ scale: 0.8, opacity: 0 }}
@@ -31,7 +31,7 @@ export default function Navbar() {
           "Veille",
           "Certifications",
           "Contact",
-        ].map((section, index) => (
+        ].map((section) => (
           <motion.a
             key={section}
             href={`#${section.toLowerCase().replace(" ", "")}`}
