@@ -11,47 +11,59 @@ import Contact from "./Components/Contact";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-white overflow-x-hidden">
-      {/* --- Navbar (fixée) --- */}
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      {/* --- Navbar --- */}
       <Navbar />
 
       {/* --- Contenu principal --- */}
-      <main className="w-full md:ml-64 md:w-[calc(100%-16rem)] overflow-y-auto overflow-x-hidden">
-        <section id="profil" className="w-full">
-          <Profil />
-        </section>
+      <main
+        className="
+          w-full
+          md:ml-64
+          md:w-[calc(100%-16rem)]
+          overflow-y-auto
+          overflow-x-hidden
+          relative
+          z-0
+        "
+      >
+        <div className="w-full mx-auto">
+          <section id="profil" className="w-full">
+            <Profil />
+          </section>
 
-        <section id="btssio" className="bg-white text-gray-900 w-full">
-          <BTSSIO />
-        </section>
+          <section id="btssio" className="bg-white text-gray-900 w-full">
+            <BTSSIO />
+          </section>
 
-        <section id="parcours" className="bg-white text-gray-900 w-full">
-          <Parcours />
-        </section>
+          <section id="parcours" className="bg-white text-gray-900 w-full">
+            <Parcours />
+          </section>
 
-        <section id="entreprise" className="bg-white text-gray-900 w-full">
-          <Entreprise />
-        </section>
+          <section id="entreprise" className="bg-white text-gray-900 w-full">
+            <Entreprise />
+          </section>
 
-        <section id="realisations" className="bg-white text-gray-900 w-full">
-          <Realisations />
-        </section>
+          <section id="realisations" className="bg-white text-gray-900 w-full">
+            <Realisations />
+          </section>
 
-        <section id="epreuves" className="bg-white text-gray-900 w-full">
-          <Epreuves />
-        </section>
+          <section id="epreuves" className="bg-white text-gray-900 w-full">
+            <Epreuves />
+          </section>
 
-        <section id="veille" className="bg-white text-gray-900 w-full">
-          <Veille />
-        </section>
+          <section id="veille" className="bg-white text-gray-900 w-full">
+            <Veille />
+          </section>
 
-        <section id="certifications" className="bg-white text-gray-900 w-full">
-          <Certifications />
-        </section>
+          <section id="certifications" className="bg-white text-gray-900 w-full">
+            <Certifications />
+          </section>
 
-        <section id="contact" className="bg-white text-gray-900 w-full">
-          <Contact />
-        </section>
+          <section id="contact" className="bg-white text-gray-900 w-full">
+            <Contact />
+          </section>
+        </div>
       </main>
     </div>
   );
