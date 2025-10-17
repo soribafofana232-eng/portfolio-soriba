@@ -21,11 +21,11 @@ export default function Realisations() {
       titre: "Projet: Robot Suiveur de ligne",
       description:
         "Compétition Gamel Trophy.",
-      techno: ["Kicad", "MPLabX", "PicSimLab"],
+      techno: ["Kicad", "MPLabX", "PicSimuGamel"],
       details: [
         "Création des cartes capteur et puissance sous Kicad.",
         "Programmation du microcontrôleur avec MPLabX.",
-        "Simulation du robot suiveur avec PicSimLab.",
+        "Simulation du robot suiveur avec PicSimuGamel.",
       ],
     },
     {
@@ -53,7 +53,7 @@ export default function Realisations() {
       titre: "Création d'un Portfolio",
       description:
         "Site personnel déployé sur domaine public avec React et Tailwind.",
-      techno: ["React", "Tailwind", "Netlify", "Vite"],
+      techno: ["React", "Vite", "Tailwind", "GitHub", "Netlify",],
       details: [
         "Développement de A à Z du portfolio sur https://portfollio-soriba.netlify.app/, hébergement, SEO de base, responsive design, organisation des fichiers en composants clairs.",
       ],

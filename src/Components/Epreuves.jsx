@@ -46,8 +46,7 @@ export default function Epreuves() {
 
         {/* Bouton vers ton tableau Google Sheets */}
         <motion.a
-          href="https://docs.google.com/spreadsheets/d/1oWnLa1VFTrlK2VpAQXXbRMHHlGMUyM2I/edit?gid=546293098#gid=546293098"
-          target="_blank"
+          href="https://docs.google.com/spreadsheets/d/1X8f-1L77_UClMm5N4bjIA5j-StiiDQK-DkYLDnhQw2Q/edit?gid=546293098#gid=546293098"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"

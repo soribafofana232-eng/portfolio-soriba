@@ -71,7 +71,7 @@ export default function Profil() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
         >
-          BTS SIO – Option SISR | Administrateur Réseau
+          BTS SIO – Option SISR | Administrateur système
         </motion.h2>
 
         <motion.p

@@ -25,7 +25,7 @@ export default function Contact() {
 
           <form
             className="space-y-4"
-            action="https://formspree.io/f/mzzbzkqg" 
+            action="https://formspree.io/f/xyzabcd"
             method="POST"
           >
             <div className="grid md:grid-cols-2 gap-4">
