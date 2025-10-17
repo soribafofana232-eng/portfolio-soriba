@@ -16,40 +16,40 @@ export default function App() {
       <Navbar />
 
       {/* --- Contenu principal --- */}
-      <main className="md:ml-64 w-full md:w-[calc(100%-16rem)] overflow-y-auto">
-        <section id="profil">
+      <main className="w-full md:ml-64 md:w-[calc(100%-16rem)] overflow-y-auto overflow-x-hidden">
+        <section id="profil" className="w-full">
           <Profil />
         </section>
 
-        <section id="btssio" className="bg-white text-gray-900">
+        <section id="btssio" className="bg-white text-gray-900 w-full">
           <BTSSIO />
         </section>
 
-        <section id="parcours" className="bg-white text-gray-900">
+        <section id="parcours" className="bg-white text-gray-900 w-full">
           <Parcours />
         </section>
 
-        <section id="entreprise" className="bg-white text-gray-900">
+        <section id="entreprise" className="bg-white text-gray-900 w-full">
           <Entreprise />
         </section>
 
-        <section id="realisations" className="bg-white text-gray-900">
+        <section id="realisations" className="bg-white text-gray-900 w-full">
           <Realisations />
         </section>
 
-        <section id="epreuves" className="bg-white text-gray-900">
+        <section id="epreuves" className="bg-white text-gray-900 w-full">
           <Epreuves />
         </section>
 
-        <section id="veille" className="bg-white text-gray-900">
+        <section id="veille" className="bg-white text-gray-900 w-full">
           <Veille />
         </section>
 
-        <section id="certifications" className="bg-white text-gray-900">
+        <section id="certifications" className="bg-white text-gray-900 w-full">
           <Certifications />
         </section>
 
-        <section id="contact" className="bg-white text-gray-900">
+        <section id="contact" className="bg-white text-gray-900 w-full">
           <Contact />
         </section>
       </main>
