@@ -9,15 +9,14 @@ import Veille from "./Components/Veille";
 import Certifications from "./Components/Certifications";
 import Contact from "./Components/Contact";
 
-
 export default function App() {
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-white overflow-x-hidden">
-      {/* --- Navbar --- */}
+    <div className="relative min-h-screen bg-white overflow-x-hidden">
+      {/* --- Navbar (fixée) --- */}
       <Navbar />
 
       {/* --- Contenu principal --- */}
-      <main className="flex-1 overflow-y-auto w-full">
+      <main className="md:ml-64 w-full md:w-[calc(100%-16rem)] overflow-y-auto">
         <section id="profil">
           <Profil />
         </section>
