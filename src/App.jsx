@@ -12,12 +12,12 @@ import Contact from "./Components/Contact";
 
 export default function App() {
   return (
-    <div className="flex min-h-screen bg-white">
-      {/* --- Bande latérale gauche --- */}
+    <div className="flex flex-col md:flex-row min-h-screen bg-white overflow-x-hidden">
+      {/* --- Navbar --- */}
       <Navbar />
 
       {/* --- Contenu principal --- */}
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto w-full">
         <section id="profil">
           <Profil />
         </section>

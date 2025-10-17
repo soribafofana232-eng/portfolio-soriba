@@ -1,10 +1,19 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* --- Global --- */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
+/* Supprime la limite de largeur fixe */
+#root {
+  max-width: none;
+  text-align: left; /* ou center si tu veux, mais left est plus naturel pour du texte */
+}
+
+/* --- Logo (si utilisé encore) --- */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -18,6 +27,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* --- Animation --- */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,6 +43,7 @@
   }
 }
 
+/* --- Cartes et texte --- */
 .card {
   padding: 2em;
 }
