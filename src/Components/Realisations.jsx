@@ -46,7 +46,7 @@ export default function Realisations() {
         "Site professionel déployé sur domaine privé.",
       techno: ["base44"],
       details: [
-        "Développement de A à Z sur https://kaizer-repair5993.base44.app/",
+        "Développement de A à Z sur https://kaizer-repair5993.base44.app",
       ],
     },
     {
@@ -55,7 +55,7 @@ export default function Realisations() {
         "Site personnel déployé sur domaine public avec React et Tailwind.",
       techno: ["React", "Vite", "Tailwind", "GitHub", "Netlify",],
       details: [
-        "Développement de A à Z du portfolio sur https://portfollio-soriba.netlify.app/, hébergement, SEO de base, responsive design, organisation des fichiers en composants clairs.",
+        "Développement de A à Z du portfolio sur https://portfollio-soriba.netlify.app, hébergement, SEO de base, responsive design, organisation des fichiers en composants clairs.",
       ],
     },
   ];

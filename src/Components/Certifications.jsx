@@ -1,123 +1,84 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Certifications() {
-  const certifications = {
-    premiereAnnee: [
-      {
-        titre: "Créez votre site web avec HTML5 et CSS3",
-        organisme: "OpenClassrooms",
-        description:
-          "Formation complète sur les fondamentaux du développement web.",
-        progression: 100,
-        couleur: "bg-green-500",
-      },
-      {
-        titre: "Concevez votre réseau TCP/IP",
-        organisme: "OpenClassrooms",
-        description:
-          "Maîtrise des concepts fondamentaux des réseaux TCP/IP.",
-        progression: 100,
-        couleur: "bg-green-500",
-      },
+  const data = {
+    "1ʳᵉ année": [
+      { t: "Créez votre site web avec HTML5 et CSS3", o: "OpenClassrooms", d: "Bases du développement web.", p: 100 },
+      { t: "Concevez votre réseau TCP/IP", o: "OpenClassrooms", d: "Maîtrise des concepts réseaux.", p: 100 },
+      { t: "Concevez votre site web avec PHP et MySQL", o: "OpenClassrooms", d: "Développement d’applications dynamiques.", p: 100 },
     ],
-    deuxiemeAnnee: [
-      {
-        titre: "Utilisez ChatGPT pour améliorer votre productivité",
-        organisme: "OpenClassrooms",
-        description:
-          "Optimiser son temps avec les outils d’intelligence artificielle.",
-        progression: 100,
-        couleur: "bg-green-500",
-      },
-      {
-        titre: "Administrez un système Linux",
-        organisme: "OpenClassrooms",
-        description:
-          "Administration de systèmes Linux Debian / Ubuntu.",
-        progression: 90,
-        couleur: "bg-blue-500",
-      },
+    "2ᵉ année": [
+      { t: "Utilisez ChatGPT pour améliorer votre productivité", o: "OpenClassrooms", d: "Optimiser son temps avec l’IA.", p: 100 },
+      { t: "Administrez un système Linux", o: "OpenClassrooms", d: "Administration Debian / Ubuntu.", p: 100 },
+      { t: "Concevez l’architecture d’un système", o: "OpenClassrooms", d: "Modélisation d’infrastructure.", p: 100 },
+      { t: "Sécuriser vos informations", o: "OpenClassrooms", d: "Sécurité réseau et durcissement.", p: 100 },
+      { t: "Certification PIX", o: "Pix.com", d: "Compétences numériques certifiées.", p: 100 },
     ],
   };
 
+  const [index, setIndex] = useState({ "1ʳᵉ année": 0, "2ᵉ année": 0 });
+  const perSlide = 2;
+
+  const slide = (year, dir) => {
+    const total = Math.ceil(data[year].length / perSlide);
+    setIndex((i) => ({ ...i, [year]: (i[year] + dir + total) % total }));
+  };
+
   return (
-    <section id="certifications" className="py-20 px-6 bg-white text-gray-900">
-      <div className="max-w-6xl mx-auto">
-        {/* --- TITRE PRINCIPAL --- */}
-        <motion.h2
-          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          Certifications
-        </motion.h2>
+    <section className="py-20 px-6 bg-white text-gray-900 max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold text-blue-900 mb-8 border-l-8 border-blue-600 pl-3">Certifications</h2>
 
-        <p className="text-gray-700 mb-12 leading-relaxed">
-          Voici l'ensemble des certifications réalisées au cours de ma formation
-          <strong> BTS SIO SISR</strong>, réparties entre la première et la
-          deuxième année.
-        </p>
+      {Object.entries(data).map(([year, certs]) => {
+        const start = index[year] * perSlide;
+        const visible = certs.slice(start, start + perSlide);
 
-        {/* --- PREMIÈRE ANNÉE --- */}
-        <h3 className="text-2xl font-bold text-blue-800 mb-6">1ʳᵉ année</h3>
-        <div className="grid gap-8 sm:grid-cols-2">
-          {certifications.premiereAnnee.map((certif, i) => (
-            <motion.div
-              key={i}
-              className="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6"
-              whileHover={{ scale: 1.03 }}
+        return (
+          <div key={year} className="mb-16 relative">
+            <h3 className="text-2xl font-bold text-blue-800 mb-6">{year}</h3>
+
+            <button
+              onClick={() => slide(year, -1)}
+              className="absolute -left-6 sm:-left-10 top-1/2 -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 shadow-lg"
             >
-              <h4 className="text-xl font-semibold text-blue-800 mb-1">
-                {certif.titre}
-              </h4>
-              <p className="text-sm text-gray-500 mb-2">{certif.organisme}</p>
-              <p className="text-gray-700 text-sm mb-4">{certif.description}</p>
+              <ChevronLeft />
+            </button>
 
-              {/* Barre de progression */}
-              <div className="w-full bg-gray-200 h-3 rounded-full mb-2">
-                <div
-                  className={`${certif.couleur} h-3 rounded-full`}
-                  style={{ width: `${certif.progression}%` }}
-                />
-              </div>
-              <p className="text-sm text-gray-600 text-right">
-                Progression : {certif.progression}%
-              </p>
-            </motion.div>
-          ))}
-        </div>
+            <div className="overflow-hidden w-full">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={index[year]}
+                  className="grid gap-8 sm:grid-cols-2"
+                  initial={{ x: 80, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -80, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {visible.map((c, i) => (
+                    <div key={i} className="border rounded-2xl shadow-md p-6 bg-white hover:shadow-xl">
+                      <h4 className="text-xl font-semibold text-blue-800">{c.t}</h4>
+                      <p className="text-sm text-gray-500">{c.o}</p>
+                      <p className="text-gray-700 text-sm mb-4">{c.d}</p>
+                      <div className="w-full bg-gray-200 h-3 rounded-full mb-2">
+                        <div className="bg-green-500 h-3 rounded-full" style={{ width: `${c.p}%` }} />
+                      </div>
+                      <p className="text-sm text-gray-600 text-right">{c.p}%</p>
+                    </div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
-        {/* --- DEUXIÈME ANNÉE --- */}
-        <h3 className="text-2xl font-bold text-blue-800 mt-16 mb-6">
-          2ᵉ année
-        </h3>
-        <div className="grid gap-8 sm:grid-cols-2">
-          {certifications.deuxiemeAnnee.map((certif, i) => (
-            <motion.div
-              key={i}
-              className="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6"
-              whileHover={{ scale: 1.03 }}
+            <button
+              onClick={() => slide(year, 1)}
+              className="absolute -right-6 sm:-right-10 top-1/2 -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 shadow-lg"
             >
-              <h4 className="text-xl font-semibold text-blue-800 mb-1">
-                {certif.titre}
-              </h4>
-              <p className="text-sm text-gray-500 mb-2">{certif.organisme}</p>
-              <p className="text-gray-700 text-sm mb-4">{certif.description}</p>
-
-              {/* Barre de progression */}
-              <div className="w-full bg-gray-200 h-3 rounded-full mb-2">
-                <div
-                  className={`${certif.couleur} h-3 rounded-full`}
-                  style={{ width: `${certif.progression}%` }}
-                />
-              </div>
-              <p className="text-sm text-gray-600 text-right">
-                Progression : {certif.progression}%
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+              <ChevronRight />
+            </button>
+          </div>
+        );
+      })}
     </section>
   );
 }
