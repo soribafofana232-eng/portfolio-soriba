@@ -11,16 +11,19 @@ import Contact from "./Components/Contact";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white overflow-x-hidden flex">
       {/* --- Navbar --- */}
       <Navbar />
 
       {/* --- Contenu principal --- */}
       <main
         className="
-          w-full
-          md:ml-64
-          md:w-[calc(100%-16rem)]
+          flex-1
+          ml-0               /* contenu centré sur mobile */
+          md:ml-64           /* décalé à droite sur desktop */
+          transition-all
+          duration-300
+          px-4               /* espace latéral pour respirer sur mobile */
           overflow-y-auto
           overflow-x-hidden
           relative
