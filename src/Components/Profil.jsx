@@ -103,7 +103,7 @@ export default function Profil() {
         </motion.div>
 
         <motion.a
-          href="/CV_2025-10-09_Soriba_Fofana.pdf"
+          href="/Soriba-Fofana-CV.pdf"
           download
           className="inline-block mt-10 px-8 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-full shadow-lg transition"
           whileHover={{ scale: 1.05 }}
