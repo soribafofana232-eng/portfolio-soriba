@@ -8,9 +8,9 @@ export default function Realisations() {
   const projets = [
     {
       titre: "Projet: Lampe Solaire",
-      description:
-        "Projet humanitaire.",
+      description: "Projet humanitaire.",
       techno: ["Solidworks", "Arduino"],
+      image: "/Lampe solaire.jpg",
       details: [
         "Conception mécanique de la lampe avec Solidworks.",
         "Câblage et intégration du panneau solaire.",
@@ -19,9 +19,9 @@ export default function Realisations() {
     },
     {
       titre: "Projet: Robot Suiveur de ligne",
-      description:
-        "Compétition Gamel Trophy.",
+      description: "Compétition Gamel Trophy.",
       techno: ["Kicad", "MPLabX", "PicSimuGamel"],
+      image: "/Gamelle.jpg",
       details: [
         "Création des cartes capteur et puissance sous Kicad.",
         "Programmation du microcontrôleur avec MPLabX.",
@@ -30,32 +30,32 @@ export default function Realisations() {
     },
     {
       titre: "Projet: Tracker solaire",
-      description:
-        "Maximisation de la production d’énergie",
+      description: "Maximisation de la production d’énergie.",
       techno: ["Solidworks", "Kicad", "LogoSoft Comfort v8.3", "VS Code"],
+      image: "/Tracker solaire.jpg",
       details: [
         "Modélisation 3D du tracker sous Solidworks.",
         "Création de la carte capteur sur Kicad.",
-        "Programmation du logo SIEMENS, des capteurs et du moteur via LogoSoft Comfort v8.3.",
+        "Programmation du logo SIEMENS via LogoSoft Comfort v8.3.",
         "Programmation de l'esp32 sur VS Code.",
       ],
     },
     {
       titre: "Création d'un site internet",
-      description:
-        "Site professionel déployé sur domaine privé.",
+      description: "Site professionnel déployé sur domaine privé.",
       techno: ["base44"],
+      image: "/Kaizer-repair.jpg",
       details: [
-        "Développement de A à Z sur https://kaizer-repair5993.base44.app",
+        "Développement de A à Z sur https://kaizer-repair5993.base44.app.",
       ],
     },
     {
       titre: "Création d'un Portfolio",
-      description:
-        "Site personnel déployé sur domaine public avec React et Tailwind.",
-      techno: ["React", "Vite", "Tailwind", "GitHub", "Netlify",],
+      description: "Site personnel déployé sur domaine public avec React et Tailwind.",
+      techno: ["React", "Vite", "Tailwind", "GitHub", "Netlify"],
+      image: "/Portfolio.jpg",
       details: [
-        "Développement de A à Z du portfolio sur https://portfollio-soriba.netlify.app, hébergement, SEO de base, responsive design, organisation des fichiers en composants clairs.",
+        "Développement complet du portfolio sur Netlify, avec SEO, responsive design et structure modulaire.",
       ],
     },
   ];
@@ -77,87 +77,27 @@ export default function Realisations() {
           l’innovation technologique.
         </p>
 
-        {/* --- Cartes des projets --- */}
+        {/* --- Cartes --- */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projets.map((projet, i) => (
             <motion.div
               key={i}
-              className="bg-white border border-gray-200 shadow-md rounded-2xl p-6 hover:shadow-xl transition-shadow cursor-pointer"
-              whileHover={{ scale: 1.03 }}
+              className="bg-gray-50 border border-gray-200 shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer"
+              whileHover={{ scale: 1.02 }}
             >
-              <h3 className="text-xl font-semibold text-blue-800 mb-2">
-                {projet.titre}
-              </h3>
-              <p className="text-gray-600 mb-4">{projet.description}</p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {projet.techno.map((t, idx) => (
-                  <span
-                    key={idx}
-                    className="text-sm bg-gray-100 text-gray-700 px-3 py-1 rounded-full"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-
-              <button
-                onClick={() => setProjetActif(projet)}
-                className="inline-flex items-center text-blue-600 hover:underline font-medium"
-              >
-                En savoir plus
-                <ExternalLink className="ml-1 w-4 h-4" />
-              </button>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* --- MODALE --- */}
-      <AnimatePresence>
-        {projetActif && (
-          <>
-            <motion.div
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setProjetActif(null)}
-            />
-            <motion.div
-              className="fixed inset-0 flex items-center justify-center z-50"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-            >
-              <div className="bg-white max-w-2xl w-full mx-6 rounded-2xl shadow-2xl p-8 relative">
-                <button
-                  onClick={() => setProjetActif(null)}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
-                >
-                  <X size={22} />
-                </button>
-
-                <h3 className="text-2xl font-semibold text-blue-800 mb-3">
-                  {projetActif.titre}
+              <img
+                src={projet.image}
+                alt={projet.titre}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">
+                  {projet.titre}
                 </h3>
-                <p className="text-gray-700 mb-6">{projetActif.description}</p>
+                <p className="text-gray-600 mb-4">{projet.description}</p>
 
-                {projetActif.details && (
-                  <>
-                    <h4 className="text-lg font-semibold text-blue-700 mb-2">
-                      Détails du projet :
-                    </h4>
-                    <ul className="list-disc list-inside text-gray-600 mb-6 space-y-1">
-                      {projetActif.details.map((d, idx) => (
-                        <li key={idx}>{d}</li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-
-                <div className="flex flex-wrap gap-2">
-                  {projetActif.techno.map((t, idx) => (
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {projet.techno.map((t, idx) => (
                     <span
                       key={idx}
                       className="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full border border-blue-100"
@@ -165,6 +105,97 @@ export default function Realisations() {
                       {t}
                     </span>
                   ))}
+                </div>
+
+                <button
+                  onClick={() => setProjetActif(projet)}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300"
+                >
+                  En savoir plus
+                  <ExternalLink className="w-4 h-4" />
+                </button>
+
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* --- Modale --- */}
+      <AnimatePresence>
+        {projetActif && (
+          <>
+            <motion.div
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setProjetActif(null)}
+            />
+            <motion.div
+              className="fixed inset-0 flex items-center justify-center z-50"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+            >
+              <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-4 overflow-hidden">
+                <div className="relative">
+                  <img
+                    src={projetActif.image}
+                    alt={projetActif.titre}
+                    className="w-full h-64 object-cover"
+                  />
+                  <button
+                    onClick={() => setProjetActif(null)}
+                    className="absolute top-4 right-4 text-white bg-black/40 rounded-full p-1 hover:bg-black/60"
+                  >
+                    <X size={22} />
+                  </button>
+                </div>
+
+                <div className="p-6 space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-blue-800">
+                      {projetActif.titre}
+                    </h3>
+                    <p className="text-gray-600">{projetActif.description}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">
+                      Détails du projet :
+                    </h4>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                      {projetActif.details.map((d, i) => (
+                        <li key={i}>{d}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">
+                      Technologies utilisées :
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {projetActif.techno.map((t, idx) => (
+                        <span
+                          key={idx}
+                          className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full border border-blue-200"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="text-right">
+                    <button
+                      onClick={() => setProjetActif(null)}
+                      className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                    >
+                      Fermer
+                    </button>
+                  </div>
                 </div>
               </div>
             </motion.div>
