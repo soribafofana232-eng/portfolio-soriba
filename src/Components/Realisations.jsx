@@ -52,7 +52,7 @@ export default function Realisations() {
     {
       titre: "Création d'un Portfolio",
       description: "Site personnel déployé sur domaine public avec React et Tailwind.",
-      techno: ["React", "Vite", "Tailwind", "GitHub", "Netlify"],
+      techno: ["VSCode", "React", "Vite", "Tailwind", "GitHub", "Netlify"],
       image: "/Portfolio.jpg",
       details: [
         "Développement complet du portfolio sur Netlify, avec SEO, responsive design et structure modulaire.",
