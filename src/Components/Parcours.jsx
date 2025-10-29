@@ -31,7 +31,7 @@ export default function Parcours() {
           </h2>
           <p className="text-sm text-gray-500 mb-2">2024 – 2025</p>
           <p className="text-gray-700 leading-relaxed">
-            Programme reconnu par l’État, axé sur la réparation, le reconditionnement et la vente de produits électroménagers.
+            Diplôme reconnu par l’État, axé sur la réparation, le reconditionnement et la vente de produits électroménagers.
           </p>
         </div>
 
