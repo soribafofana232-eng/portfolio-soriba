@@ -91,7 +91,7 @@ export default function Profil() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          {["Système", "Réseau", "Cybersécurité"].map((skill, index) => (
+          {["Système", "Réseau", "Cybersécurité", "Développement"].map((skill, index) => (
             <motion.span
               key={index}
               className="px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm md:text-base font-medium hover:bg-indigo-600/50 transition"

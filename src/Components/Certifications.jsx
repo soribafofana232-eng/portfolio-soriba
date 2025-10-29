@@ -8,6 +8,7 @@ export default function Certifications() {
       { t: "Créez votre site web avec HTML5 et CSS3", o: "OpenClassrooms", d: "Bases du développement web.", p: 100 },
       { t: "Concevez votre réseau TCP/IP", o: "OpenClassrooms", d: "Maîtrise des concepts réseaux.", p: 100 },
       { t: "Concevez votre site web avec PHP et MySQL", o: "OpenClassrooms", d: "Développement d’applications dynamiques.", p: 100 },
+      { t: "CCNA 1 & 2", o: "Cisco", d: "Fomation Cisco Certified Network Associate", p: 100},
     ],
     "2ᵉ année": [
       { t: "Utilisez ChatGPT pour améliorer votre productivité", o: "OpenClassrooms", d: "Optimiser son temps avec l’IA.", p: 100 },
@@ -15,6 +16,7 @@ export default function Certifications() {
       { t: "Concevez l’architecture d’un système", o: "OpenClassrooms", d: "Modélisation d’infrastructure.", p: 100 },
       { t: "Sécuriser vos informations", o: "OpenClassrooms", d: "Sécurité réseau et durcissement.", p: 100 },
       { t: "Certification PIX", o: "Pix.com", d: "Compétences numériques certifiées.", p: 100 },
+      { t: "SecNumAcademie (ANSSI)", o: "SecNumAcademie", d: "MOOC cybersécurité de l'ANSSI", p: 100},
     ],
   };
 
