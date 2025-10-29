@@ -74,8 +74,7 @@ export default function Entreprise() {
 
         <p className="text-gray-600 mb-12">
           Voici les expériences professionnelles réalisées dans le cadre de ma
-          formation, au sein de l’entreprise{" "}
-          <span className="font-semibold">Save</span>.
+          formation, au sein de mes entreprises.
         </p>
 
         {/* --- Cartes --- */}
