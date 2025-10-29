@@ -1,136 +1,226 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { ExternalLink, X } from "lucide-react";
 
 export default function Entreprise() {
-  const [showModal, setShowModal] = useState(false);
+  const [entrepriseActive, setEntrepriseActive] = useState(null);
+
+  const entreprises = [
+    {
+      nom: "Save La Défense",
+      periode: "Octobre 2024 – Août 2025 | Contrat d’apprentissage",
+      description:
+        "Vendeur et technicien spécialisé dans la réparation et le service client au sein d’un environnement technologique exigeant.",
+      image: "/save.jpg",
+      details: [
+        "Réparation de smartphones, tablettes et ordinateurs.",
+        "Accueil et conseil client pour le choix de produits et services.",
+        "Utilisation de plateformes techniques internes pour la gestion des réparations.",
+        "Gestion du matériel et suivi des interventions.",
+      ],
+      activites: [
+        {
+          categorie: "Maintenance et assistance technique",
+          contenu:
+            "Diagnostic, démontage et réparation d’appareils électroniques.",
+        },
+        {
+          categorie: "Service et support informatique",
+          contenu:
+            "Installation, mise à jour et suivi des appareils clients.",
+        },
+      ],
+      techno: ["Trepidai", "Picea Soft"],
+    },
+    {
+      nom: "Save Wagram",
+      periode: "Août 2025 – Octobre 2025 | Contrat d’apprentissage",
+      description:
+        "Vendeur et technicien spécialisé dans la réparation et le service client au sein d’un environnement technologique exigeant.",
+      image: "/save.jpg",
+      details: [
+        "Réparation de smartphones, tablettes et ordinateurs.",
+        "Accueil et conseil client pour le choix de produits et services.",
+        "Utilisation des plateformes techniques Apple (GSX) et Samsung (GSPN).",
+        "Gestion du matériel et suivi des interventions.",
+      ],
+      activites: [
+        {
+          categorie: "Maintenance et assistance technique",
+          contenu:
+            "Diagnostic, démontage et réparation d’appareils électroniques.",
+        },
+        {
+          categorie: "Service et support informatique",
+          contenu:
+            "Installation, mise à jour et suivi des appareils clients.",
+        },
+      ],
+      techno: ["GSX (Apple)", "GSPN (Samsung)", "Trepidai", "Picea Soft"],
+    },
+  ];
 
   return (
-    <section className="p-10 min-h-screen bg-white text-gray-800">
-      <h1 className="text-4xl font-bold text-blue-800 mb-2">Mon Entreprise</h1>
-      <div className="w-16 h-1 bg-blue-600 mb-10"></div>
+    <section id="entreprise" className="py-20 px-6 bg-white text-gray-900">
+      <div className="max-w-6xl mx-auto">
+        {/* --- Titre --- */}
+        <motion.h2
+          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Mon Entreprise
+        </motion.h2>
 
-      <p className="text-gray-600 mb-8">
-        Voici les expériences professionnelles réalisées dans le cadre de ma formation.
-      </p>
+        <p className="text-gray-600 mb-12">
+          Voici les expériences professionnelles réalisées dans le cadre de ma
+          formation, au sein de l’entreprise{" "}
+          <span className="font-semibold">Save</span>.
+        </p>
 
-      {/* --- Carte Entreprise --- */}
-      <div className="flex flex-col md:flex-row items-center justify-between bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-        <div className="flex-1">
-          <h2 className="text-2xl font-semibold text-blue-700">Save La Défense</h2>
-          <p className="text-gray-500">2024 – 2025 | Contrat d’apprentissage</p>
-          <p className="mt-2 text-gray-600">
-            Vendeur et technicien spécialisé dans la réparation et le service client
-            au sein d’un environnement technologique exigeant.
-          </p>
-          <button
-            onClick={() => setShowModal(true)}
-            className="mt-4 px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-          >
-            En savoir plus
-          </button>
-        </div>
-
-        {/* 🔹 Ta photo locale */}
-        <img
-          src="/save.jpg"
-          alt="Save La Défense"
-          className="w-40 h-40 object-cover rounded-xl mt-6 md:mt-0 shadow-md border border-gray-200"
-        />
-      </div>
-
-      {/* --- Fenêtre modale --- */}
-      {showModal && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="bg-white rounded-xl shadow-2xl w-11/12 md:w-3/4 lg:w-1/2 overflow-hidden"
-          >
-            <div className="relative">
-              {/* 🔹 Même photo dans la modale */}
+        {/* --- Cartes --- */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {entreprises.map((entreprise, i) => (
+            <motion.div
+              key={i}
+              className="bg-gray-50 border border-gray-200 shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+            >
               <img
-                src="/save.jpg"
-                alt="Save La Défense"
-                className="w-full h-64 object-cover bg-gray-100"
+                src={entreprise.image}
+                alt={entreprise.nom}
+                className="w-full h-48 object-cover"
               />
-              <button
-                onClick={() => setShowModal(false)}
-                className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-2xl"
-              >
-                ✕
-              </button>
-            </div>
-
-            <div className="p-6 space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold text-blue-700">Save La Défense</h3>
-                <p className="text-gray-500">2024 – 2025 | Contrat d’apprentissage</p>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">Description</h4>
-                <p className="text-gray-600 leading-relaxed">
-                  En tant que vendeur et technicien, j’assurais la réparation de
-                  smartphones, tablettes ainsi que d’ordinateurs, tout en accompagnant les clients
-                  dans leurs choix de produits et services. Cette expérience m’a
-                  permis de développer des compétences en gestion du matériel,
-                  relation client et rigueur technique.
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-blue-800 mb-1">
+                  {entreprise.nom}
+                </h3>
+                <p className="text-gray-500 text-sm mb-2">{entreprise.periode}</p>
+                <p className="text-gray-600 mb-4 text-sm">
+                  {entreprise.description}
                 </p>
-              </div>
 
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">Activités par Catégorie</h4>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-                    <h5 className="text-blue-700 font-medium">
-                      Maintenance et assistance technique
-                    </h5>
-                    <p className="text-gray-600 text-sm">
-                      Diagnostic, démontage et réparation de smartphones, tablettes et ordinateurs.
-                    </p>
-                  </div>
-                  <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-                    <h5 className="text-blue-700 font-medium">
-                      Service et support informatique
-                    </h5>
-                    <p className="text-gray-600 text-sm">
-                      Réparation, installation et suivi technique des appareils pour les clients.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Technologies utilisées
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {["GSX (Apple)", "GSPN (Samsung)", "Trepidai", "Picea Soft"].map(
-                    (tech, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    )
-                  )}
-                </div>
-              </div>
-
-              <div className="text-right">
                 <button
-                  onClick={() => setShowModal(false)}
-                  className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                  onClick={() => setEntrepriseActive(entreprise)}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 text-sm"
                 >
-                  Fermer
+                  En savoir plus
+                  <ExternalLink className="w-4 h-4" />
                 </button>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
-      )}
+      </div>
+
+      {/* --- Modale --- */}
+      <AnimatePresence>
+        {entrepriseActive && (
+          <>
+            {/* --- Arrière-plan --- */}
+            <motion.div
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 cursor-pointer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setEntrepriseActive(null)}
+            />
+
+            {/* --- Fenêtre principale --- */}
+            <motion.div
+              className="fixed inset-0 flex items-center justify-center z-50 p-4"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+            >
+              <div
+                className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden relative flex flex-col max-h-[90vh]"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Image */}
+                <div className="relative flex-shrink-0">
+                  <img
+                    src={entrepriseActive.image}
+                    alt={entrepriseActive.nom}
+                    className="w-full h-48 object-cover"
+                  />
+                  <button
+                    onClick={() => setEntrepriseActive(null)}
+                    className="absolute top-4 right-4 text-white bg-black/40 rounded-full p-1 hover:bg-black/60"
+                  >
+                    <X size={22} />
+                  </button>
+                </div>
+
+                {/* Contenu scrollable */}
+                <div className="p-6 overflow-y-auto flex-1 space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-blue-800">
+                      {entrepriseActive.nom}
+                    </h3>
+                    <p className="text-gray-500">{entrepriseActive.periode}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">
+                      Détails
+                    </h4>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                      {entrepriseActive.details.map((d, i) => (
+                        <li key={i}>{d}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">
+                      Activités principales
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {entrepriseActive.activites.map((a, i) => (
+                        <div
+                          key={i}
+                          className="p-4 bg-blue-50 rounded-lg border border-blue-200"
+                        >
+                          <h5 className="text-blue-700 font-medium">
+                            {a.categorie}
+                          </h5>
+                          <p className="text-gray-600 text-sm">{a.contenu}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">
+                      Technologies utilisées
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {entrepriseActive.techno.map((t, idx) => (
+                        <span
+                          key={idx}
+                          className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full border border-blue-200"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="text-right">
+                    <button
+                      onClick={() => setEntrepriseActive(null)}
+                      className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                    >
+                      Fermer
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
