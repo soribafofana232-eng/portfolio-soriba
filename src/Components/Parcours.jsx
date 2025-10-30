@@ -14,7 +14,7 @@ export default function Parcours() {
         <div className="relative">
           <div className="absolute -left-[18px] top-1.5 w-4 h-4 bg-blue-600 rounded-full"></div>
           <h2 className="text-lg font-semibold text-blue-700">
-            BTS SIO – Institut IEF2I
+            BTS SIO - Institut IEF2I
           </h2>
           <p className="text-sm text-gray-500 mb-2">2025 – 2027</p>
           <p className="text-gray-700 leading-relaxed">
@@ -39,7 +39,7 @@ export default function Parcours() {
         <div className="relative">
           <div className="absolute -left-[18px] top-1.5 w-4 h-4 bg-blue-600 rounded-full"></div>
           <h2 className="text-lg font-semibold text-blue-700">
-            BUT GEII – IUT de Cachan
+            BUT GEII - IUT de Cachan
         </h2>
           <p className="text-sm text-gray-500 mb-2">2023 – 2024</p>
           <p className="text-gray-700 leading-relaxed">
