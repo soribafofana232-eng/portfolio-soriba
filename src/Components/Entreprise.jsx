@@ -69,7 +69,7 @@ export default function Entreprise() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Mon Entreprise
+          Mes Entreprises
         </motion.h2>
 
         <p className="text-gray-600 mb-12">
