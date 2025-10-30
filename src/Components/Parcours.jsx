@@ -27,7 +27,7 @@ export default function Parcours() {
         <div className="relative">
           <div className="absolute -left-[18px] top-1.5 w-4 h-4 bg-blue-600 rounded-full"></div>
           <h2 className="text-lg font-semibold text-blue-700">
-            Formation RNCP38178 - Tele Pop Music 
+            Formation RNCP38718 - Tele Pop Music 
           </h2>
           <p className="text-sm text-gray-500 mb-2">2024 – 2025</p>
           <p className="text-gray-700 leading-relaxed">
