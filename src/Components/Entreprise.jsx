@@ -73,8 +73,8 @@ export default function Entreprise() {
         </motion.h2>
 
         <p className="text-gray-600 mb-12">
-          Voici les expériences professionnelles réalisées dans le cadre de ma
-          formation, au sein de mes entreprises.
+          Voici les expériences professionnelles réalisées dans le cadre de mes
+          formations, au sein de mes entreprises.
         </p>
 
         {/* --- Cartes --- */}
