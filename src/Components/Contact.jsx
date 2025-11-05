@@ -1,7 +1,38 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Linkedin } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        // ✅ Redirection vers ton profil LinkedIn après succès
+        window.location.href =
+          "https://www.linkedin.com/in/soriba-fofana-9a33b6284/";
+      } else {
+        alert("Une erreur est survenue, veuillez réessayer.");
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      alert("Erreur réseau. Vérifiez votre connexion.");
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="min-h-screen bg-gray-50 text-gray-800 p-8 md:p-16">
       {/* --- TITRE --- */}
@@ -25,8 +56,9 @@ export default function Contact() {
 
           <form
             className="space-y-4"
-            action="https://formspree.io/f/xyzabcd"
+            action="https://formspree.io/f/xyzabcd" // ⚠️ Mets ici ton vrai ID Formspree
             method="POST"
+            onSubmit={handleSubmit}
           >
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -71,10 +103,11 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-md"
+              disabled={isSubmitting}
+              className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-md disabled:opacity-70"
             >
               <Mail size={18} />
-              Envoyer le message
+              {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
             </button>
           </form>
         </motion.div>
@@ -122,7 +155,7 @@ export default function Contact() {
               Réseaux sociaux
             </h3>
             <a
-              href="https://www.linkedin.com/in/soribafofana"
+              href="https://www.linkedin.com/in/soriba-fofana-9a33b6284/"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-3 text-indigo-600 hover:text-indigo-800 font-medium"

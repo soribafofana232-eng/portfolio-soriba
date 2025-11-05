@@ -58,6 +58,33 @@ export default function Entreprise() {
       ],
       techno: ["GSX (Apple)", "GSPN (Samsung)", "Trepidai", "Picea Soft"],
     },
+    {
+      nom: "Dentegen",
+      periode: "Novembre 2025 – Novembre 2026 | Contrat d’apprentissage",
+      description:
+        "Développeur d’applications et d’outils métiers, spécialisé dans la conception, la maintenance et l’optimisation de solutions logicielles adaptées aux besoins des utilisateurs.",
+      image: "dentegen.jpg",
+      details: [
+        "Développer et maintenir des outils numériques internes.",
+        "Assurer la gestion et la sécurité du système informatique.",
+        "Automatiser et optimiser les processus informatiques.",
+        "Assurer le support technique et l’assistance aux utilisateur",
+        "Concevoir et développer des applications métiers adaptées aux besoins de l’entreprise.",
+      ],
+      activites: [
+        {
+          categorie: "Développement et maintenance d’applications",
+          contenu:
+            "Conception, codage, tests et mise à jour de solutions logicielles internes.",
+        },
+        {
+          categorie: "Assistance technique et support utilisateur",
+          contenu:
+            "Analyse des incidents, résolution de problèmes et accompagnement des utilisateurs.",
+        },
+      ],
+      techno: ["Vite", "React", "GitHub", "Netlify"],
+    },
   ];
 
   return (
