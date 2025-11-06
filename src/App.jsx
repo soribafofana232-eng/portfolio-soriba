@@ -8,6 +8,7 @@ import Epreuves from "./Components/Epreuves";
 import Veille from "./Components/Veille";
 import Certifications from "./Components/Certifications";
 import Contact from "./Components/Contact";
+import ChatBox from "./Components/ChatBox";
 
 export default function App() {
   return (
@@ -68,6 +69,9 @@ export default function App() {
           </section>
         </div>
       </main>
+
+      {/* ChatBox flottante */}
+      <ChatBox />
     </div>
   );
 }

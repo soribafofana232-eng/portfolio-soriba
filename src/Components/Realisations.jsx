@@ -7,7 +7,7 @@ export default function Realisations() {
 
   const projets = [
     {
-      titre: "Projet: Lampe Solaire",
+      titre: "Projet : Lampe Solaire",
       description: "Projet humanitaire.",
       techno: ["Solidworks", "Arduino"],
       image: "/Lampe solaire.jpg",
@@ -18,7 +18,7 @@ export default function Realisations() {
       ],
     },
     {
-      titre: "Projet: Robot Suiveur de ligne",
+      titre: "Projet : Robot Suiveur de ligne",
       description: "Compétition Gamel Trophy.",
       techno: ["Kicad", "MPLabX", "PicSimuGamel"],
       image: "/Gamelle.jpg",
@@ -29,7 +29,7 @@ export default function Realisations() {
       ],
     },
     {
-      titre: "Projet: Tracker solaire",
+      titre: "Projet : Tracker solaire",
       description: "Maximisation de la production d’énergie.",
       techno: ["Solidworks", "Kicad", "LogoSoft Comfort v8.3", "VS Code"],
       image: "/Tracker solaire.jpg",
