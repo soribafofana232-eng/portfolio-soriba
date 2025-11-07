@@ -4,10 +4,12 @@ import { useState } from "react";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSuccess(false);
 
     const form = e.target;
     const data = new FormData(form);
@@ -20,9 +22,9 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        // ✅ Redirection vers ton profil LinkedIn après succès
-        window.location.href =
-          "https://www.linkedin.com/in/soriba-fofana-9a33b6284/";
+        setSuccess(true);
+        form.reset();
+        setIsSubmitting(false);
       } else {
         alert("Une erreur est survenue, veuillez réessayer.");
         setIsSubmitting(false);
@@ -56,7 +58,7 @@ export default function Contact() {
 
           <form
             className="space-y-4"
-            action="https://formspree.io/f/xyzabcd" // ⚠️ Mets ici ton vrai ID Formspree
+            action="https://formspree.io/f/xvgvenlz" // ⚠️ Ton ID Formspree ici
             method="POST"
             onSubmit={handleSubmit}
           >
@@ -101,14 +103,23 @@ export default function Contact() {
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-md disabled:opacity-70"
-            >
-              <Mail size={18} />
-              {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
-            </button>
+            <div className="flex flex-col gap-3">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-md disabled:opacity-70"
+              >
+                <Mail size={18} />
+                {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+              </button>
+
+              {/* ✅ Message de confirmation */}
+              {success && (
+                <p className="text-green-600 text-sm text-center mt-2">
+                  ✅ Message envoyé avec succès !
+                </p>
+              )}
+            </div>
           </form>
         </motion.div>
 
