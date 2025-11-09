@@ -68,7 +68,7 @@ export default function Entreprise() {
         "Développer et maintenir des outils numériques internes.",
         "Assurer la gestion et la sécurité du système informatique.",
         "Automatiser et optimiser les processus informatiques.",
-        "Assurer le support technique et l’assistance aux utilisateur",
+        "Assurer le support technique et l’assistance aux utilisateur.",
         "Concevoir et développer des applications métiers adaptées aux besoins de l’entreprise.",
       ],
       activites: [
@@ -88,9 +88,8 @@ export default function Entreprise() {
   ];
 
   return (
-    <section id="entreprise" className="py-20 px-6 bg-white text-gray-900">
+    <section id="entreprise" className="py-20 px-10 bg-white text-gray-900 ml-6">
       <div className="max-w-6xl mx-auto">
-        {/* --- Titre --- */}
         <motion.h2
           className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
           initial={{ opacity: 0, y: -20 }}
@@ -100,8 +99,7 @@ export default function Entreprise() {
         </motion.h2>
 
         <p className="text-gray-600 mb-12">
-          Voici les expériences professionnelles réalisées dans le cadre de mes
-          formations, au sein de mes entreprises.
+          Voici les expériences professionnelles réalisées dans le cadre de mes formations, au sein de mes entreprises.
         </p>
 
         {/* --- Cartes --- */}
@@ -143,7 +141,6 @@ export default function Entreprise() {
       <AnimatePresence>
         {entrepriseActive && (
           <>
-            {/* --- Arrière-plan --- */}
             <motion.div
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 cursor-pointer"
               initial={{ opacity: 0 }}
@@ -151,8 +148,6 @@ export default function Entreprise() {
               exit={{ opacity: 0 }}
               onClick={() => setEntrepriseActive(null)}
             />
-
-            {/* --- Fenêtre principale --- */}
             <motion.div
               className="fixed inset-0 flex items-center justify-center z-50 p-4"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -163,7 +158,6 @@ export default function Entreprise() {
                 className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden relative flex flex-col max-h-[90vh]"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Image */}
                 <div className="relative flex-shrink-0">
                   <img
                     src={entrepriseActive.image}
@@ -178,14 +172,11 @@ export default function Entreprise() {
                   </button>
                 </div>
 
-                {/* Contenu scrollable */}
                 <div className="p-6 overflow-y-auto flex-1 space-y-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-blue-800">
-                      {entrepriseActive.nom}
-                    </h3>
-                    <p className="text-gray-500">{entrepriseActive.periode}</p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-blue-800">
+                    {entrepriseActive.nom}
+                  </h3>
+                  <p className="text-gray-500">{entrepriseActive.periode}</p>
 
                   <div>
                     <h4 className="text-lg font-semibold text-blue-700 mb-2">

@@ -38,8 +38,8 @@ export default function Contact() {
   return (
     <section className="min-h-screen bg-gray-50 text-gray-800 p-8 md:p-16">
       {/* --- TITRE --- */}
-      <div className="max-w-5xl mx-auto mb-10">
-        <h1 className="text-4xl font-bold text-indigo-800 border-l-8 border-indigo-600 pl-3">
+      <div className="max-w-6xl mx-auto mb-10">
+        <h1           className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3">
           Contact
         </h1>
         <p className="text-gray-600 mt-4">
@@ -101,7 +101,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 placeholder="Expliquez-moi votre besoin ou votre message ici..."
-                rows="5"
+                rows={5}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
                 required
               ></textarea>

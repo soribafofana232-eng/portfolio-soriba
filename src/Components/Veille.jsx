@@ -69,7 +69,7 @@ Le technicien SISR doit maîtriser ces technologies pour concevoir des environne
 
   return (
     <section id="veille" className="py-20 px-6 bg-white text-gray-900">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto ml-6 sm:ml-10">
         {/* --- Titre --- */}
         <motion.h2
           className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
@@ -81,10 +81,11 @@ Le technicien SISR doit maîtriser ces technologies pour concevoir des environne
 
         {/* --- Introduction --- */}
         <p className="text-gray-700 mb-12 leading-relaxed">
-          Ma veille porte sur <strong>la virtualisation des serveurs</strong>. 
-          Elle permet d’exécuter plusieurs systèmes sur une seule machine physique. 
-          Apparu avec IBM dans les années 1960, le concept s’est démocratisé grâce à VMware et Proxmox, 
-          devenant une base essentielle du <strong>cloud computing</strong>.
+          Ma veille porte sur <strong>la virtualisation des serveurs</strong>.
+          Elle permet d’exécuter plusieurs systèmes sur une seule machine
+          physique. Apparu avec IBM dans les années 1960, le concept s’est
+          démocratisé grâce à VMware et Proxmox, devenant une base essentielle
+          du <strong>cloud computing</strong>.
         </p>
 
         {/* --- Cartes --- */}

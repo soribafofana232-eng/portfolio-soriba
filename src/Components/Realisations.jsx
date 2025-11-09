@@ -61,7 +61,7 @@ export default function Realisations() {
   ];
 
   return (
-    <section id="realisations" className="py-20 px-6 bg-white text-gray-900">
+    <section id="realisations" className="py-20 px-8 md:px-16 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
@@ -114,7 +114,6 @@ export default function Realisations() {
                   En savoir plus
                   <ExternalLink className="w-4 h-4" />
                 </button>
-
               </div>
             </motion.div>
           ))}
@@ -133,12 +132,12 @@ export default function Realisations() {
               onClick={() => setProjetActif(null)}
             />
             <motion.div
-              className="fixed inset-0 flex items-center justify-center z-50"
+              className="fixed inset-0 flex items-center justify-center z-50 p-4"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
             >
-              <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-4 overflow-hidden">
+              <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden">
                 <div className="relative">
                   <img
                     src={projetActif.image}
