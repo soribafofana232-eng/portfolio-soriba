@@ -43,21 +43,21 @@ export default function Parcours() {
           </h2>
           <p className="text-sm text-gray-500 mb-2">2023 – 2024</p>
           <p className="text-gray-700 leading-relaxed">
-            Bachelor Universitaire Technologique en Génie Électrique et Informatique Industrielle, avant ma réorientation en formation RNCP38178.
+            Bachelor Universitaire Technologique en Génie Électrique et Informatique Industrielle, avant ma réorientation en formation RNCP38718.
           </p>
         </div>
 
-        {/* 2022 – 2023 */}
+        {/* 2021 – 2023 */}
         <div className="relative">
           <div className="absolute -left-[18px] top-1.5 w-4 h-4 bg-blue-600 rounded-full"></div>
           <h2 className="text-lg font-semibold text-blue-700">BAC STI2D - Lycée Colbert</h2>
-          <p className="text-sm text-gray-500 mb-2">2022 – 2023</p>
+          <p className="text-sm text-gray-500 mb-2">2021 – 2023</p>
           <p className="text-gray-700 leading-relaxed">
             Baccalauréat Sciences et Technologies de l’Industrie et du Développement Durable, spécialité Innovation Technologique et Éco-conception (ITEC).
           </p>
         </div>
 
-        {/* 2019 – 2020 */}
+        {/* 2016 – 2020 */}
         <div className="relative">
           <div className="absolute -left-[18px] top-1.5 w-4 h-4 bg-blue-600 rounded-full"></div>
           <h2 className="text-lg font-semibold text-blue-700">Brevet des collèges - Collège Maxence Van Der Meersch</h2>
