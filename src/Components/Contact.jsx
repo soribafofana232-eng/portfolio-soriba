@@ -39,8 +39,12 @@ export default function Contact() {
     <section className="min-h-screen bg-gray-50 text-gray-800 p-8 md:p-16">
       {/* --- TITRE --- */}
       <div className="max-w-5xl mx-auto mb-10">
-        <h1 className="text-4xl font-bold text-indigo-800 mb-2">Contact</h1>
-        <div className="h-1 w-24 bg-indigo-600 rounded"></div>
+        <h1 className="text-4xl font-bold text-indigo-800 border-l-8 border-indigo-600 pl-3">
+          Contact
+        </h1>
+        <p className="text-gray-600 mt-4">
+          N’hésitez pas à m’envoyer un message ou à consulter mes coordonnées.
+        </p>
       </div>
 
       {/* --- CONTENU PRINCIPAL --- */}
@@ -58,7 +62,7 @@ export default function Contact() {
 
           <form
             className="space-y-4"
-            action="https://formspree.io/f/xvgvenlz" // ⚠️ Ton ID Formspree ici
+            action="https://formspree.io/f/xvgvenlz"
             method="POST"
             onSubmit={handleSubmit}
           >
@@ -113,7 +117,6 @@ export default function Contact() {
                 {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
               </button>
 
-              {/* ✅ Message de confirmation */}
               {success && (
                 <p className="text-green-600 text-sm text-center mt-2">
                   ✅ Message envoyé avec succès !
@@ -160,11 +163,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* --- LIEN LINKEDIN --- */}
           <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
-            <h3 className="text-indigo-800 font-semibold mb-3">
-              Réseaux sociaux
-            </h3>
+            <h3 className="text-indigo-800 font-semibold mb-3">Réseaux sociaux</h3>
             <a
               href="https://www.linkedin.com/in/soriba-fofana-9a33b6284/"
               target="_blank"

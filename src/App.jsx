@@ -9,6 +9,7 @@ import Veille from "./Components/Veille";
 import Certifications from "./Components/Certifications";
 import Contact from "./Components/Contact";
 import ChatBox from "./Components/ChatBox";
+import SocialBubblesSidebar from "./Components/SocialBubblesSidebar";
 
 export default function App() {
   return (

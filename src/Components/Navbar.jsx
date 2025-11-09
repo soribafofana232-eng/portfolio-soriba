@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import SocialBubblesSidebar from "./SocialBubblesSidebar"; // ✅ Ajouté
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Navbar() {
         {open ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* --- Barre latérale --- */}
+      {/* --- Barre latérale mobile --- */}
       <AnimatePresence>
         {open && (
           <motion.aside
@@ -37,20 +38,19 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-indigo-700/90 to-violet-900/90 text-white flex flex-col justify-between px-6 py-10 shadow-2xl z-40"
           >
-            {/* --- Haut : Infos utilisateur --- */}
             <div className="flex flex-col items-center text-center">
               <motion.img
                 src="/soriba.jpg"
                 alt="Soriba Fofana"
                 className="w-28 h-28 rounded-full border-4 border-indigo-400 shadow-lg object-cover"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8 }}
               />
               <h2 className="text-2xl font-bold mt-4">Soriba FOFANA</h2>
               <p className="text-sm text-indigo-200 mt-1 font-light">
                 Administrateur Réseau
               </p>
+
+              {/* ✅ Les bulles sous le poste */}
+              <SocialBubblesSidebar />
             </div>
 
             {/* --- Menu navigation --- */}
@@ -85,7 +85,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* --- Version bureau (toujours visible sur grand écran) --- */}
+      {/* --- Barre latérale desktop --- */}
       <aside className="hidden md:flex fixed left-0 top-0 h-full w-64 bg-gradient-to-b from-indigo-700/80 to-violet-900/80 text-white flex-col justify-between px-6 py-10 shadow-2xl">
         <div className="flex flex-col items-center text-center">
           <motion.img
@@ -97,6 +97,9 @@ export default function Navbar() {
           <p className="text-sm text-indigo-200 mt-1 font-light">
             Administrateur Réseau
           </p>
+
+          {/* ✅ Les bulles visibles ici aussi */}
+          <SocialBubblesSidebar />
         </div>
 
         <nav className="mt-10 flex flex-col gap-5 text-sm font-medium">
@@ -107,11 +110,7 @@ export default function Navbar() {
               .toLowerCase()
               .replace(/\s+/g, "");
             return (
-              <a
-                key={section}
-                href={`#${id}`}
-                className="relative group py-1"
-              >
+              <a key={section} href={`#${id}`} className="relative group py-1">
                 <span className="text-gray-300 group-hover:text-white transition">
                   {section}
                 </span>

@@ -7,18 +7,19 @@ export default function Epreuves() {
 
   return (
     <section className="bg-gray-50 min-h-screen py-16">
-      {/* Conteneur centré global : titre + onglets + contenu seront alignés */}
+      {/* Conteneur centré global */}
       <div className="max-w-6xl mx-auto px-6">
-        {/* --- Titre principal (maintenu dans le même conteneur) --- */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-blue-900 inline-block">
+        {/* --- Titre principal avec barre à gauche --- */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold text-blue-800 border-l-8 border-blue-600 pl-3">
             Épreuves
           </h1>
-          {/* trait sous le titre (optionnel, aligné avec le titre) */}
-          <div className="mt-2 w-20 h-1 bg-blue-600 rounded"></div>
+          <p className="text-gray-600 mt-4">
+            Découvrez les épreuves professionnelles réalisées durant ma formation.
+          </p>
         </div>
 
-        {/* --- Onglets de navigation, alignés avec le titre --- */}
+        {/* --- Onglets de navigation --- */}
         <div className="flex gap-10 border-b border-gray-200 mb-10">
           <button
             onClick={() => setActiveTab("E5")}
