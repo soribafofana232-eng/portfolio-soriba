@@ -61,7 +61,7 @@ export default function Parcours() {
         <div className="relative">
           <div className="absolute -left-[18px] top-1.5 w-4 h-4 bg-blue-600 rounded-full"></div>
           <h2 className="text-lg font-semibold text-blue-700">Brevet des collèges - Collège Maxence Van Der Meersch</h2>
-          <p className="text-sm text-gray-500 mb-2">2019-2020</p>
+          <p className="text-sm text-gray-500 mb-2">2016-2020</p>
           <p className="text-gray-700 leading-relaxed">
             Brevet des collèges Mention Bien.
           </p>
