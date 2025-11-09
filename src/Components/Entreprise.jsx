@@ -7,22 +7,22 @@ export default function Entreprise() {
 
   const entreprises = [
     {
-      nom: "BlediPhone",
-      periode: "Juin 2019 – Juin 2019 | Stage d'observation",
-      description:
-        "Vendeur et technicien",
-      image: "/blediphone.jpg",
-      details: [
-        "Réparation de smartphones, tablettes et ordinateurs.",
-        "Accueil et conseil client pour le choix de produits et services.",
-                ],
-      activites: [
-        {
-          categorie: "Maintenance et assistance technique",
-          contenu:
-            "Diagnostic, démontage et réparation d’appareils électroniques.",
-        },
-      ],
+  nom: "BlediPhone",
+  periode: "Juin 2019 – Juin 2019 | Stage d'observation",
+  description: "Vendeur et technicien",
+  image: "/blediphone.jpg",
+  details: [
+    "Apprentissage des techniques de maintenance et de réparation de smartphones.",
+    "Accueil et conseil client pour le choix de produits et services.",
+    "Diagnostic des problèmes matériels et logiciels.",
+  ],
+  activites: [
+    {
+      categorie: "Maintenance et assistance technique",
+      contenu: "Vente, diagnostic, démontage et réparation d’appareils électroniques.",
+    },
+  ],
+  techno: ["Apple Configurator"],
     },
     {
       nom: "Save La Défense",
@@ -74,7 +74,7 @@ export default function Entreprise() {
             "Installation, mise à jour et suivi des appareils clients.",
         },
       ],
-      techno: ["GSX (Apple)", "GSPN (Samsung)", "Trepidai", "Picea Soft"],
+      techno: ["Apple Configurator", "GSX (Apple)", "GSPN (Samsung)", "Trepidai", "Picea Soft"],
     },
     {
       nom: "Dentegen",
