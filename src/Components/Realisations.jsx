@@ -24,7 +24,7 @@ export default function Realisations() {
       image: "/Gamelle.jpg",
       details: [
         "Création des cartes capteur et puissance sous Kicad.",
-        "Brasure à l'étain des composants sur les cartes",
+        "Brasure à l'étain des composants sur les cartes.",
         "Programmation du microcontrôleur avec MPLabX.",
         "Simulation du robot suiveur avec PicSimuGamel.",
       ],
@@ -37,7 +37,7 @@ export default function Realisations() {
       details: [
         "Modélisation 3D du tracker sous Solidworks.",
         "Création de la carte capteur sur Kicad.",
-        "Brasure à l'étain des composants sur les cartes",
+        "Brasure à l'étain des composants sur les cartes.",
         "Programmation du logo SIEMENS via LogoSoft Comfort v8.3.",
         "Programmation de l'esp32 sur VS Code.",
       ],

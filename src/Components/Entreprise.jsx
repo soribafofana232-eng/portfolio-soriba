@@ -7,6 +7,24 @@ export default function Entreprise() {
 
   const entreprises = [
     {
+      nom: "BlediPhone",
+      periode: "Juin 2019 – Juin 2019 | Stage d'observation",
+      description:
+        "Vendeur et technicien",
+      image: "/blediphone.jpg",
+      details: [
+        "Réparation de smartphones, tablettes et ordinateurs.",
+        "Accueil et conseil client pour le choix de produits et services.",
+                ],
+      activites: [
+        {
+          categorie: "Maintenance et assistance technique",
+          contenu:
+            "Diagnostic, démontage et réparation d’appareils électroniques.",
+        },
+      ],
+    },
+    {
       nom: "Save La Défense",
       periode: "Octobre 2024 – Août 2025 | Contrat d’apprentissage",
       description:
