@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import SocialBubblesSidebar from "./SocialBubblesSidebar"; // ✅ Ajouté
+import { useNavigate, useLocation } from "react-router-dom";
+import SocialBubblesSidebar from "./SocialBubblesSidebar";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const sections = [
     "Profil",
@@ -18,9 +21,31 @@ export default function Navbar() {
     "Contact",
   ];
 
+  const handleClick = (section) => {
+    const id = section
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/\s+/g, "");
+
+    if (location.pathname === "/") {
+      // Scroll vers la section sur la page principale
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+      }
+    } else {
+      // Naviguer vers la page principale avec hash
+      navigate(`/#${id}`);
+    }
+
+    setOpen(false); // fermer le menu mobile
+  };
+
   return (
     <>
-      {/* --- Bouton Hamburger (visible sur mobile) --- */}
+      {/* --- Bouton Hamburger mobile --- */}
       <button
         className="fixed top-5 left-5 z-50 md:hidden bg-indigo-600 text-white p-2 rounded-lg shadow-lg"
         onClick={() => setOpen(!open)}
@@ -28,7 +53,7 @@ export default function Navbar() {
         {open ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* --- Barre latérale mobile --- */}
+      {/* --- Menu mobile --- */}
       <AnimatePresence>
         {open && (
           <motion.aside
@@ -49,33 +74,20 @@ export default function Navbar() {
                 Administrateur Réseau
               </p>
 
-              {/* ✅ Les bulles sous le poste */}
               <SocialBubblesSidebar />
             </div>
 
-            {/* --- Menu navigation --- */}
             <nav className="mt-10 flex flex-col gap-5 text-sm font-medium">
-              {sections.map((section) => {
-                const id = section
-                  .normalize("NFD")
-                  .replace(/[\u0300-\u036f]/g, "")
-                  .toLowerCase()
-                  .replace(/\s+/g, "");
-                return (
-                  <motion.a
-                    key={section}
-                    href={`#${id}`}
-                    className="relative group py-1"
-                    whileHover={{ x: 5 }}
-                    onClick={() => setOpen(false)}
-                  >
-                    <span className="text-gray-300 group-hover:text-white transition">
-                      {section}
-                    </span>
-                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 group-hover:w-full transition-all duration-300"></span>
-                  </motion.a>
-                );
-              })}
+              {sections.map((section) => (
+                <button
+                  key={section}
+                  onClick={() => handleClick(section)}
+                  className="relative group py-1 text-gray-300 hover:text-white transition text-left"
+                >
+                  {section}
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 group-hover:w-full transition-all duration-300"></span>
+                </button>
+              ))}
             </nav>
 
             <p className="text-xs text-center text-indigo-300 mt-8">
@@ -85,7 +97,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* --- Barre latérale desktop --- */}
+      {/* --- Menu desktop --- */}
       <aside className="hidden md:flex fixed left-0 top-0 h-full w-64 bg-gradient-to-b from-indigo-700/80 to-violet-900/80 text-white flex-col justify-between px-6 py-10 shadow-2xl">
         <div className="flex flex-col items-center text-center">
           <motion.img
@@ -98,26 +110,20 @@ export default function Navbar() {
             Administrateur Réseau
           </p>
 
-          {/* ✅ Les bulles visibles ici aussi */}
           <SocialBubblesSidebar />
         </div>
 
         <nav className="mt-10 flex flex-col gap-5 text-sm font-medium">
-          {sections.map((section) => {
-            const id = section
-              .normalize("NFD")
-              .replace(/[\u0300-\u036f]/g, "")
-              .toLowerCase()
-              .replace(/\s+/g, "");
-            return (
-              <a key={section} href={`#${id}`} className="relative group py-1">
-                <span className="text-gray-300 group-hover:text-white transition">
-                  {section}
-                </span>
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 group-hover:w-full transition-all duration-300"></span>
-              </a>
-            );
-          })}
+          {sections.map((section) => (
+            <button
+              key={section}
+              onClick={() => handleClick(section)}
+              className="relative group py-1 text-gray-300 hover:text-white transition text-left"
+            >
+              {section}
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-indigo-400 group-hover:w-full transition-all duration-300"></span>
+            </button>
+          ))}
         </nav>
 
         <p className="text-xs text-center text-indigo-300 mt-8">

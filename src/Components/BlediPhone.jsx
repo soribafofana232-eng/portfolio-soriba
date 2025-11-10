@@ -164,6 +164,7 @@ export default function BlediPhone() {
             <h3 className="text-3xl font-semibold text-blue-800 mb-2">Technologies utilisées :</h3>
             <ul className="list-disc list-inside space-y-1">
               <li>Apple Configurator</li>
+              <li>ITunes</li>
             </ul>
           </div>
         </section>
