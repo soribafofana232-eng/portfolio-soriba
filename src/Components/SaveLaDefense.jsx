@@ -197,9 +197,10 @@ export default function SaveLaDefense() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">III Conclusion</h2>
             <p className="text-gray-800">
-              Cette alternance que j'ai effectuée au sein de l'entreprise SAVE LA DÉFENSE a été très enrichissante pour mon développement professionnel. 
-              J'ai eu l'opportunité d'acquérir de nombreuses compétences pratiques en mettant en application les connaissances pratiques lors de mes cours. 
-              Mais par-dessus tout, cette alternance m'a permis d'avoir une méthodologie professionnelle et de m'adapter à un environnement d'entreprise.
+Cette alternance que j’ai effectuée au sein de l’entreprise Save La Défense a représenté une expérience extrêmement enrichissante, tant sur le plan professionnel que personnel. Elle m’a permis de découvrir le fonctionnement concret d’une entreprise spécialisée dans la réparation et le reconditionnement de produits électroniques, un domaine en pleine expansion.
+J’ai pu mettre en pratique les compétences techniques acquises lors de ma formation, notamment dans le diagnostic, la maintenance et la gestion des appareils électroniques, tout en développant de nouvelles aptitudes directement liées au monde professionnel : rigueur, autonomie, sens du service client et travail en équipe.
+Cette expérience m’a également appris à m’adapter à des situations variées, à respecter des délais, à gérer des priorités et à adopter une méthodologie de travail efficace. J’ai pris conscience de l’importance de la communication au sein d’une équipe technique et de la qualité du suivi client dans la réussite d’un service.
+Enfin, cette alternance a confirmé mon intérêt pour les métiers techniques et informatiques, tout en renforçant ma motivation à poursuivre dans cette voie. Elle m’a permis de gagner en confiance, en professionnalisme et de mieux comprendre les exigences du monde de l’entreprise.
             </p>
           </div>
         </section>

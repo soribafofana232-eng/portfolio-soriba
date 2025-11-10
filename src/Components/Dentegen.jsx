@@ -58,7 +58,7 @@ export default function Dentegen() {
           <ul className="space-y-3 text-gray-700">
             <li><strong>Nom :</strong> Dentegen</li>
             <li><strong>Forme juridique :</strong> SAS, société par actions simplifiée</li>
-            <li><strong>Capital :</strong> -1000,00 €</li>
+            <li><strong>Capital :</strong> -1 000,00 €</li>
             <li><strong>Chiffre d'affaire :</strong> Non communiqué</li>
             <li><strong>Siège social :</strong> 68 RUE JEAN JAURES, 77130 MONTEREAU-FAULT-YONNE</li>
             <li><strong>Président :</strong> Monsieur Sayada Alexandre</li>

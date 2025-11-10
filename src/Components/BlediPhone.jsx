@@ -58,7 +58,7 @@ export default function BlediPhone() {
           </h2>
           <ul className="space-y-3 text-gray-700">
             <li><strong>Nom :</strong> BlediPhone</li>
-            <li><strong>Forme juridique :</strong> SAS, société par actions simplifiée</li>
+            <li><strong>Forme juridique :</strong> Entreprise individuelle</li>
             <li><strong>Capital :</strong> Non communiqué</li>
             <li><strong>Chiffre d'affaire :</strong> Non communiqué</li>
             <li><strong>Siège social :</strong> Non communiqué</li>
@@ -174,8 +174,11 @@ export default function BlediPhone() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">III Conclusion</h2>
             <p className="text-gray-800">
-              Ce stage que j'ai effectué au sein de l'entreprise BlediPhone a été très instructif pour mon développement professionnel. 
-              J'ai pu acquérir de nombreuses compétences pratiques et comprendre l'organisation d'une entreprise technologique.
+Ce stage que j’ai effectué au sein de l’entreprise BlediPhone a été particulièrement formateur et enrichissant pour mon développement professionnel.
+Il m’a permis de découvrir le fonctionnement concret d’une entreprise spécialisée dans la vente et la réparation de smartphones, un domaine à la fois technique et en constante évolution.
+Au cours de cette expérience, j’ai eu l’opportunité de mettre en pratique mes connaissances techniques acquises en formation, notamment dans le diagnostic, la réparation et la remise en service de divers appareils mobiles. J’ai également pu améliorer mes compétences relationnelles en étant en contact direct avec la clientèle, en apprenant à écouter leurs besoins, à les conseiller et à leur offrir des solutions adaptées.
+Cette immersion dans le monde professionnel m’a aussi permis de comprendre les enjeux liés à la gestion d’un atelier de réparation, tels que l’organisation du stock, la rapidité d’exécution, la rigueur dans le suivi des interventions, ainsi que l’importance d’une bonne communication au sein de l’équipe.
+En somme, ce stage m’a apporté une vision globale du métier de technicien en maintenance mobile et m’a conforté dans mon choix d’évoluer dans le secteur des technologies et des services numériques. Cette expérience m’a non seulement permis de renforcer mes compétences techniques, mais aussi d’acquérir une meilleure méthodologie de travail et un sens accru des responsabilités.
             </p>
           </div>
         </section>

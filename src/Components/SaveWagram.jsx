@@ -200,9 +200,12 @@ export default function SaveWagram() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">III Conclusion</h2>
             <p className="text-gray-800">
-              Cette alternance au sein de SAVE WAGRAM a été très enrichissante pour mon développement professionnel.
-              J’ai pu renforcer mes compétences techniques, appliquer mes connaissances et apprendre à m’adapter
-              à un environnement professionnel exigeant et structuré.
+Cette alternance au sein de SAVE WAGRAM a été une expérience extrêmement enrichissante tant sur le plan professionnel que personnel.
+Elle m’a permis de renforcer mes compétences techniques en travaillant sur des interventions concrètes liées à la réparation et la maintenance d’appareils électroniques, tout en approfondissant ma compréhension du fonctionnement d’un service technique structuré et orienté client.
+J’ai également eu l’occasion de mettre en pratique les connaissances acquises en cours, notamment dans les domaines du diagnostic, de la gestion du matériel et de la sécurisation des données. Ces mises en situation réelles m’ont aidé à mieux saisir l’importance de la rigueur, de la méthodologie et de la communication dans le milieu professionnel.
+Au-delà de l’aspect technique, cette expérience m’a appris à travailler efficacement en équipe, à gérer les priorités et à adapter mes compétences selon les besoins du poste et des clients.
+L’encadrement et la collaboration avec mes collègues m’ont permis de gagner en autonomie, tout en développant un esprit d’initiative et un sens accru des responsabilités.
+En somme, cette alternance a constitué une étape clé dans mon parcours. Elle m’a donné une vision concrète du monde professionnel, consolidé mes acquis et conforté mon choix de poursuivre dans le domaine de l’informatique et des réseaux.
             </p>
           </div>
         </section>
