@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Profil from "./Components/Profil";
 import BTSSIO from "./Components/BTSSIO";
@@ -9,70 +10,88 @@ import Veille from "./Components/Veille";
 import Certifications from "./Components/Certifications";
 import Contact from "./Components/Contact";
 import ChatBox from "./Components/ChatBox";
-import SocialBubblesSidebar from "./Components/SocialBubblesSidebar";
+import SaveLaDefense from "./Components/SaveLaDefense";
+import SaveWagram from "./Components/SaveWagram";
+import Dentegen from "./Components/Dentegen";
+import BlediPhone from "./Components/BlediPhone";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden flex">
-      {/* --- Navbar --- */}
-      <Navbar />
+    <Router>
+      <div className="min-h-screen bg-white overflow-x-hidden flex">
+        {/* --- Navbar --- */}
+        <Navbar />
 
-      {/* --- Contenu principal --- */}
-      <main
-        className="
-          flex-1
-          ml-0               /* contenu centré sur mobile */
-          md:ml-64           /* décalé à droite sur desktop */
-          transition-all
-          duration-300
-          px-4               /* espace latéral pour respirer sur mobile */
-          overflow-y-auto
-          overflow-x-hidden
-          relative
-          z-0
-        "
-      >
-        <div className="w-full mx-auto">
-          <section id="profil" className="w-full">
-            <Profil />
-          </section>
+        {/* --- Contenu principal --- */}
+        <main
+          className="
+            flex-1
+            ml-0
+            md:ml-64
+            transition-all
+            duration-300
+            px-4
+            overflow-y-auto
+            overflow-x-hidden
+            relative
+            z-0
+          "
+        >
+          <Routes>
+            {/* Page principale */}
+            <Route
+              path="/"
+              element={
+                <div className="w-full mx-auto">
+                  <section id="profil">
+                    <Profil />
+                  </section>
+                  <section id="btssio">
+                    <BTSSIO />
+                  </section>
+                  <section id="parcours">
+                    <Parcours />
+                  </section>
+                  <section id="entreprise">
+                    <Entreprise />
+                  </section>
+                  <section id="realisations">
+                    <Realisations />
+                  </section>
+                  <section id="epreuves">
+                    <Epreuves />
+                  </section>
+                  <section id="veille">
+                    <Veille />
+                  </section>
+                  <section id="certifications">
+                    <Certifications />
+                  </section>
+                  <section id="contact">
+                    <Contact />
+                  </section>
+                </div>
+              }
+            />
 
-          <section id="btssio" className="bg-white text-gray-900 w-full">
-            <BTSSIO />
-          </section>
+            {/* Page BlediPhone */}
+            <Route path="/blediphone" element={<BlediPhone />} />
 
-          <section id="parcours" className="bg-white text-gray-900 w-full">
-            <Parcours />
-          </section>
 
-          <section id="entreprise" className="bg-white text-gray-900 w-full">
-            <Entreprise />
-          </section>
+            {/* Page Save La Défense */}
+            <Route path="/save-la-defense" element={<SaveLaDefense />} />
 
-          <section id="realisations" className="bg-white text-gray-900 w-full">
-            <Realisations />
-          </section>
+            {/* Page Save Wagram */}
+            <Route path="/save-wagram" element={<SaveWagram />} />
 
-          <section id="epreuves" className="bg-white text-gray-900 w-full">
-            <Epreuves />
-          </section>
+            {/* Page Dentegen */}
+            <Route path="/dentegen" element={<Dentegen />} />
+          </Routes>
+        </main>
 
-          <section id="veille" className="bg-white text-gray-900 w-full">
-            <Veille />
-          </section>
-
-          <section id="certifications" className="bg-white text-gray-900 w-full">
-            <Certifications />
-          </section>
-
-          <section id="contact" className="bg-white text-gray-900 w-full">
-            <Contact />
-          </section>
-        </div>
-      </main>
-
-      {/* ChatBox flottante */}
-      <ChatBox />
-    </div>
+        {/* ChatBox flottante */}
+        <ChatBox />
+      </div>
+    </Router>
   );
 }
