@@ -6,8 +6,9 @@ export default function Dentegen() {
 
   const entrepriseRef = useRef(null);
   const missionsRef = useRef(null);
+  const conclusionRef = useRef(null); // ✅ Manquait ici
 
-    useEffect(() => {
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 
@@ -16,6 +17,7 @@ export default function Dentegen() {
     let ref = null;
     if (section === "Entreprise") ref = entrepriseRef;
     else if (section === "Missions") ref = missionsRef;
+    else if (section === "Conclusion") ref = conclusionRef; // ✅ ajouté aussi
 
     if (ref && ref.current) {
       const offset = ref.current.getBoundingClientRect().top + window.scrollY - 80;
@@ -58,9 +60,9 @@ export default function Dentegen() {
           <ul className="space-y-3 text-gray-700">
             <li><strong>Nom :</strong> Dentegen</li>
             <li><strong>Forme juridique :</strong> SAS, société par actions simplifiée</li>
-            <li><strong>Capital :</strong> -1 000,00 €</li>
+            <li><strong>Capital :</strong> 1 000,00 €</li>
             <li><strong>Chiffre d'affaire :</strong> Non communiqué</li>
-            <li><strong>Siège social :</strong> 68 RUE JEAN JAURES, 77130 MONTEREAU-FAULT-YONNE</li>
+            <li><strong>Siège social :</strong> 68 Rue Jean Jaurès, 77130 Montereau-Fault-Yonne</li>
             <li><strong>Président :</strong> Monsieur Sayada Alexandre</li>
             <li><strong>Domaine d'activité :</strong> Activités des sièges sociaux ; conseil de gestion</li>
             <li><strong>Site internet :</strong> Non communiqué</li>
@@ -80,18 +82,23 @@ export default function Dentegen() {
         </h2>
 
         <p className="mb-4">
-         Dentegen accompagne la création et l’exploitation de centres de santé et dentaires en proposant un modèle clé‑en‑main. Fondée en 2023, l’entreprise met à disposition des ressources humaines, des solutions logicielles, des outils marketing et un accompagnement juridique pour ses implantations.
+          Dentegen accompagne la création et l’exploitation de centres de santé et dentaires
+          en proposant un modèle clé-en-main. Fondée en 2023, l’entreprise met à disposition
+          des ressources humaines, des solutions logicielles, des outils marketing et un
+          accompagnement juridique pour ses implantations.
         </p>
 
         <p className="mb-4">
-          Elle agit également comme structure de conseil pour les affaires et la gestion des sièges sociaux, offrant aux entrepreneurs et établissements de santé un support stratégique et opérationnel.
+          Elle agit également comme structure de conseil pour les affaires et la gestion
+          des sièges sociaux, offrant aux entrepreneurs et établissements de santé un support
+          stratégique et opérationnel.
         </p>
       </motion.div>
 
       {/* --- BARRE D'ONGLETS STICKY --- */}
       <div className="max-w-6xl mx-auto mt-12 flex flex-col items-center">
         <div className="sticky top-6 z-50 bg-white rounded-full shadow-md flex justify-center gap-8 py-3 px-8 w-fit mx-auto">
-          {["Entreprise", "Missions"].map((onglet) => (
+          {["Entreprise", "Missions", "Conclusion"].map((onglet) => (
             <button
               key={onglet}
               onClick={() => scrollToSection(onglet)}
@@ -166,12 +173,26 @@ export default function Dentegen() {
               <li>Outils bureautiques standards</li>
               <li>Logiciels de gestion internes</li>
               <li>VS Code</li>
-              <li>Vite </li>
+              <li>Vite</li>
               <li>React</li>
-              <li>Tailwindcss</li>
+              <li>TailwindCSS</li>
               <li>GitHub</li>
               <li>Netlify</li>
             </ul>
+          </div>
+        </section>
+
+        {/* III Conclusion */}
+        <section ref={conclusionRef} className="flex items-start gap-4 mb-2">
+          <div className="w-1 bg-blue-600 h-14 mt-1"></div>
+          <div>
+            <h2 className="text-4xl font-bold text-blue-900 mb-2">III Conclusion</h2>
+            <p className="text-gray-800">
+Cette alternance au sein de l’entreprise Dentegen m’a offert une expérience formatrice et concrète dans le domaine de la gestion et du conseil en organisation. J’ai pu découvrir le fonctionnement interne d’une société de type SAS et comprendre comment s’articulent les différents pôles stratégiques — administratifs, financiers et opérationnels — au sein d’une structure dynamique.
+Travailler dans cet environnement m’a permis de développer mes compétences en gestion de projet, en coordination d’équipe et en communication professionnelle, tout en renforçant ma maîtrise des outils numériques utilisés dans la gestion quotidienne d’une entreprise.
+J’ai également acquis une meilleure compréhension des enjeux de planification, de suivi des activités et de prise de décision stratégique, essentiels à la réussite d’une organisation. Cette immersion m’a amené à adopter une véritable méthodologie de travail rigoureuse, axée sur la précision, l’autonomie et l’efficacité.
+Enfin, cette expérience m’a conforté dans ma volonté d’évoluer dans un secteur orienté vers la gestion et l’optimisation des processus d’entreprise, où l’adaptabilité, la réactivité et la collaboration sont au cœur du succès collectif. Elle a été pour moi une étape clé dans mon développement professionnel, alliant apprentissage technique et maturité organisationnelle.
+            </p>
           </div>
         </section>
       </div>
