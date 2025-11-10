@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Dentegen() {
@@ -6,6 +6,10 @@ export default function Dentegen() {
 
   const entrepriseRef = useRef(null);
   const missionsRef = useRef(null);
+
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
 
   const scrollToSection = (section) => {
     setOngletActif(section);

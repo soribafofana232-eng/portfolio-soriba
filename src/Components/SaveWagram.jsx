@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function SaveWagram() {
@@ -7,6 +7,10 @@ export default function SaveWagram() {
   const entrepriseRef = useRef(null);
   const missionsRef = useRef(null);
   const conclusionRef = useRef(null);
+
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
 
   const scrollToSection = (section) => {
     setOngletActif(section);

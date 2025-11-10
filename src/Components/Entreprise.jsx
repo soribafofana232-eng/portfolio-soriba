@@ -10,7 +10,7 @@ export default function Entreprise() {
   const entreprises = [
     {
       nom: "BlediPhone",
-      periode: "Juin 2019 – Juin 2019 | Stage d'observation",
+      periode: "Juin 2019 | Stage d'observation",
       description: "Vendeur et technicien",
       image: "/blediphone.jpg",
       details: [
