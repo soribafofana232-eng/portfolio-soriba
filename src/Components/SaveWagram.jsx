@@ -107,27 +107,37 @@ export default function SaveWagram() {
         </p>
       </motion.div>
 
-      {/* --- BARRE D'ONGLETS STICKY --- */}
-      <div className="max-w-6xl mx-auto mt-8 flex flex-col items-center">
-        <div className="sticky top-6 z-50 bg-white rounded-full shadow-md flex justify-center gap-8 py-3 px-8 w-fit mx-auto">
-          {["Entreprise", "Missions", "Conclusion"].map((onglet) => (
-            <button
-              key={onglet}
-              onClick={() => scrollToSection(onglet)}
-              className={`relative font-semibold text-lg transition ${
-                ongletActif === onglet
-                  ? "text-orange-500"
-                  : "text-gray-500 hover:text-blue-600"
-              }`}
-            >
-              {onglet}
-              {ongletActif === onglet && (
-                <span className="absolute left-0 right-0 -bottom-1 mx-auto w-6 h-[2px] bg-orange-400 rounded-full" />
-              )}
-            </button>
-          ))}
-        </div>
-      </div>
+{/* --- BARRE DE NAVIGATION STYLE RÉGION --- */}
+<div className="w-full bg-gradient-to-r from-gray-700 via-blue-800 to-blue-500 text-white py-4 px-6 flex flex-col items-center">
+  {/* Conteneur intérieur arrondi */}
+  <div className="bg-white text-gray-800 rounded-full shadow-lg flex justify-between items-center w-full max-w-6xl px-8 py-2">
+    {/* Titre à gauche */}
+    <h1 className="text-xl font-semibold text-gray-900">
+      ALTERNANCE RNCP 38718 – SAVE WAGRAM
+    </h1>
+
+    {/* Onglets à droite */}
+    <div className="flex items-center gap-10">
+      {["Entreprise", "Missions", "Conclusion"].map((onglet) => (
+        <button
+          key={onglet}
+          onClick={() => scrollToSection(onglet)}
+          className={`relative font-medium text-lg transition ${
+            ongletActif === onglet
+              ? "text-orange-500"
+              : "text-gray-500 hover:text-blue-700"
+          }`}
+        >
+          {onglet}
+          {ongletActif === onglet && (
+            <span className="absolute left-0 right-0 -bottom-1 mx-auto w-6 h-[2px] bg-orange-400 rounded-full" />
+          )}
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
 
       {/* --- SECTIONS --- */}
       <div className="max-w-6xl mx-auto mt-6 space-y-4">
@@ -140,7 +150,7 @@ export default function SaveWagram() {
             <h3 className="text-3xl font-semibold text-blue-800 mb-2">1. Fonctionnement :</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li><strong>Accueil client :</strong> Les clients sont reçus pour diagnostiquer leurs appareils, obtenir des conseils ou faire réparer leurs appareils électroniques.</li>
-              <li><strong>Service technique :</strong> Les techniciens de Save La Défense utilisent des plateformes techniques internes pour gérer les réparations et suivre chaque intervention.</li>
+              <li><strong>Service technique :</strong> Les techniciens de Save Wagram utilisent des plateformes techniques internes pour gérer les réparations et suivre chaque intervention.</li>
               <li><strong>Réparation et maintenance :</strong> Chaque appareil est vérifié et réparé selon des protocoles stricts, garantissant la qualité et la fiabilité. Les appareils reconditionnés sont testés sur 33 points de contrôle et bénéficient d’une garantie.</li>
               <li><strong>Recyclage et gestion des pièces :</strong> Save possède ses propres systèmes pour recycler les pièces et gérer les déchets électroniques, contribuant à un fonctionnement plus durable.</li>
             </ul>
