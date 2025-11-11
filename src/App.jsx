@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 import Navbar from "./Components/Navbar";
 import Profil from "./Components/Profil";
 import BTSSIO from "./Components/BTSSIO";
@@ -14,6 +16,26 @@ import SaveLaDefense from "./Components/SaveLaDefense";
 import SaveWagram from "./Components/SaveWagram";
 import Dentegen from "./Components/Dentegen";
 import BlediPhone from "./Components/BlediPhone";
+
+// 🔹 Ce composant gère le scroll automatique vers la bonne section
+function ScrollToHashElement() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location]);
+
+  return null;
+}
 
 export default function App() {
   return (
@@ -38,7 +60,7 @@ export default function App() {
           "
         >
           <Routes>
-            {/* Page principale */}
+            {/* --- Page principale --- */}
             <Route
               path="/"
               element={
@@ -74,24 +96,20 @@ export default function App() {
               }
             />
 
-            {/* Page BlediPhone */}
+            {/* --- Pages projets individuelles --- */}
             <Route path="/blediphone" element={<BlediPhone />} />
-
-
-            {/* Page Save La Défense */}
             <Route path="/save-la-defense" element={<SaveLaDefense />} />
-
-            {/* Page Save Wagram */}
             <Route path="/save-wagram" element={<SaveWagram />} />
-
-            {/* Page Dentegen */}
             <Route path="/dentegen" element={<Dentegen />} />
           </Routes>
         </main>
 
-        {/* ChatBox flottante */}
+        {/* --- ChatBox flottante --- */}
         <ChatBox />
       </div>
+
+      {/* 🔹 Gestion du scroll automatique après redirection */}
+      <ScrollToHashElement />
     </Router>
   );
 }
