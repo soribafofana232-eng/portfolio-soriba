@@ -113,7 +113,7 @@ export default function SaveLaDefense() {
   <div className="bg-white text-gray-800 rounded-full shadow-lg flex justify-between items-center w-full max-w-6xl px-8 py-2">
     {/* Titre à gauche */}
     <h1 className="text-xl font-semibold text-gray-900">
-      ALTERNANCE RNCP 38718 – SAVE LA DÉFENSE
+      ALTERNANCE RNCP38718 – SAVE LA DÉFENSE
     </h1>
 
     {/* Onglets à droite */}
