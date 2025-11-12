@@ -12,7 +12,7 @@ export default function Epreuves() {
         {/* --- Titre principal avec barre à gauche --- */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-blue-800 border-l-8 border-blue-600 pl-3">
-            Épreuves
+            Mes Épreuves
           </h1>
           <p className="text-gray-600 mt-4">
             Découvrez les épreuves professionnelles réalisées durant ma formation.

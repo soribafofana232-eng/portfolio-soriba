@@ -4,7 +4,7 @@ export default function BTSSIO() {
       {/* --- TITRE --- */}
       <div className="max-w-6xl mx-auto mb-12">
         <h1 className="text-4xl font-bold text-blue-800 border-l-8 border-blue-600 pl-3">
-          BTS SIO
+          Mon BTS SIO
         </h1>
         <p className="text-gray-600 mt-4">
           Formation et débouchés du Brevet de Technicien Supérieur Services Informatiques aux Organisations.

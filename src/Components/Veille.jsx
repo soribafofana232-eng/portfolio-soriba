@@ -76,7 +76,7 @@ Le technicien SISR doit maîtriser ces technologies pour concevoir des environne
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Veille Technologique
+         Ma Veille Technologique
         </motion.h2>
 
         {/* --- Introduction --- */}
