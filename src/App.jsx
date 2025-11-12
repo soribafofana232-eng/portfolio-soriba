@@ -22,20 +22,32 @@ function ScrollToHashElement() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
+    if (!location.hash) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const id = location.hash.replace("#", "");
+    let attempts = 0;
+
+    const tryScroll = () => {
       const el = document.getElementById(id);
       if (el) {
         const offset = el.getBoundingClientRect().top + window.scrollY - 80;
         window.scrollTo({ top: offset, behavior: "smooth" });
+      } else if (attempts < 15) {
+        // 🔁 Réessaye jusqu’à 15 fois (≈3 secondes au total)
+        attempts++;
+        setTimeout(tryScroll, 200);
       }
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    };
+
+    tryScroll();
   }, [location]);
 
   return null;
 }
+
 
 export default function App() {
   return (
