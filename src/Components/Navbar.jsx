@@ -98,7 +98,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* --- Menu desktop --- */}
-      <aside className="hidden md:flex fixed left-0 top-0 h-full w-64 bg-gradient-to-b from-indigo-700/80 to-violet-900/80 text-white flex-col justify-between px-6 py-10 shadow-2xl">
+        <aside className="hidden md:flex fixed left-0 top-0 h-full w-64 bg-gradient-to-b from-indigo-700/80 to-violet-900/80 text-white flex-col justify-start px-6 py-6 shadow-2xl">
         <div className="flex flex-col items-center text-center">
           <motion.img
             src="/soriba.jpg"
