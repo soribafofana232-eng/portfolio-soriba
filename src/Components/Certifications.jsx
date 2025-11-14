@@ -47,7 +47,7 @@ export default function Certifications() {
       o: "MOOC ANSSI",
       d: "MOOC cybersécurité de l'ANSSI.",
       p: 100,
-      img: "/diplomes/secnum.png",
+      img: "/module-anssi.png",
     },
     // ---- OPENCLASSROOMS ----
     {
