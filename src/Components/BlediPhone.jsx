@@ -93,7 +93,7 @@ export default function BlediPhone() {
 {/* --- BARRE DE NAVIGATION STYLE RÉGION --- */}
 <div className="w-full bg-gradient-to-r from-gray-700 via-blue-800 to-blue-500 text-white py-4 px-6 flex flex-col items-center">
   {/* Conteneur intérieur arrondi */}
-  <div className="bg-white text-gray-800 rounded-full shadow-lg flex justify-between items-center w-full max-w-6xl px-8 py-2">
+<div className="bg-white text-gray-800 rounded-full shadow-lg flex flex-col md:flex-row justify-between items-center w-full px-6 py-3 gap-4 md:gap-10">
     {/* Titre à gauche */}
     <h1 className="text-xl font-semibold text-gray-900">
       STAGE DE 4E – BLEDIPHONE
