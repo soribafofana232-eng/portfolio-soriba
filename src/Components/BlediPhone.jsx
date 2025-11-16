@@ -129,21 +129,21 @@ export default function BlediPhone() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">I Entreprise</h2>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">1. Fonctionnement :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">1. Fonctionnement</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li><strong>Accueil client :</strong> Découverte des produits et conseils personnalisés.</li>
               <li><strong>Service technique :</strong> Apprentissage des techniques de maintenance et réparation de smartphones.</li>
               <li><strong>Organisation :</strong> Diagnostic des problèmes matériels et logiciels.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">2. Organisation interne :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">2. Organisation interne</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li><strong>Direction :</strong> Supervision par le responsable du magasin et du service technique.</li>
               <li><strong>Équipe technique :</strong> Techniciens spécialisés pour le démontage et la réparation des appareils électroniques.</li>
               <li><strong>Support administratif :</strong> Gestion des interventions et suivi du matériel.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">3. Points forts :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">3. Points forts</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li>Expérience pratique dans la réparation de smartphones.</li>
               <li>Accueil et conseil client.</li>
@@ -158,19 +158,19 @@ export default function BlediPhone() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">II Missions</h2>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Détails des missions :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Détails des missions</h3>
             <ul className="list-disc list-inside space-y-1 text-gray-700 mb-2">
               <li>Apprentissage des techniques de maintenance et réparation de smartphones.</li>
               <li>Accueil et conseil client pour le choix de produits et services.</li>
               <li>Diagnostic des problèmes matériels et logiciels.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Activités principales :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Activités principales</h3>
             <ul className="list-disc list-inside space-y-1 mb-2">
               <li><strong>Maintenance et assistance technique :</strong> Vente, diagnostic, démontage et réparation d’appareils électroniques.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Technologies utilisées :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Technologies utilisées</h3>
             <ul className="list-disc list-inside space-y-1">
               <li>Apple Configurator</li>
               <li>ITunes</li>

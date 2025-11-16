@@ -134,21 +134,21 @@ export default function Dentegen() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">I Entreprise</h2>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">1. Fonctionnement :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">1. Fonctionnement</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li><strong>Accueil client :</strong> Les clients sont reçus pour diagnostiquer leurs besoins et obtenir des conseils.</li>
               <li><strong>Service technique :</strong> L’entreprise propose un accompagnement et des solutions de gestion pour les activités internes.</li>
               <li><strong>Organisation :</strong> Chaque activité suit un protocole interne pour assurer efficacité et qualité.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">2. Organisation interne :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">2. Organisation interne</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li><strong>Direction :</strong> Président Monsieur Sayada Alexandre avec une structure de gestion classique.</li>
               <li><strong>Équipe :</strong> Composée de collaborateurs spécialisés en gestion et organisation.</li>
               <li><strong>Support administratif :</strong> Gestion des opérations internes et suivi des projets.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">3. Points forts :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">3. Points forts</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li>Expertise dans le conseil de gestion</li>
               <li>Structure interne organisée</li>
@@ -164,20 +164,20 @@ export default function Dentegen() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">II Missions</h2>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Détails des missions :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Détails des missions</h3>
             <ul className="list-disc list-inside space-y-1 text-gray-700 mb-2">
               <li>Analyse et suivi des opérations internes</li>
               <li>Gestion administrative et organisation des projets</li>
               <li>Accompagnement des équipes dans la prise de décision</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Activités principales :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Activités principales</h3>
             <ul className="list-disc list-inside space-y-1 mb-2">
               <li><strong>Gestion de projets :</strong> Suivi et coordination des tâches et équipes.</li>
               <li><strong>Support administratif :</strong> Gestion de documents et reporting.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Technologies utilisées :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Technologies utilisées</h3>
             <ul className="list-disc list-inside space-y-1">
               <li>Outils bureautiques standards</li>
               <li>Logiciels de gestion internes</li>

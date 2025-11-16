@@ -146,7 +146,7 @@ export default function SaveLaDefense() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">I Entreprise</h2>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">1. Fonctionnement :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">1. Fonctionnement</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li><strong>Accueil client :</strong> Les clients sont reçus pour diagnostiquer leurs appareils, obtenir des conseils ou faire réparer leurs appareils électroniques.</li>
               <li><strong>Service technique :</strong> Les techniciens de Save La Défense utilisent des plateformes techniques internes pour gérer les réparations et suivre chaque intervention.</li>
@@ -154,14 +154,14 @@ export default function SaveLaDefense() {
               <li><strong>Recyclage et gestion des pièces :</strong> Save possède ses propres systèmes pour recycler les pièces et gérer les déchets électroniques, contribuant à un fonctionnement plus durable.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">2. Organisation interne :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">2. Organisation interne</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li><strong>Direction :</strong> L’entreprise est dirigée par un président (Monsieur Guian Jean-Marie) et dispose d’une structure classique d’entreprise, avec des responsables pour la gestion commerciale, technique et administrative.</li>
               <li><strong>Équipe technique :</strong> Composée de techniciens spécialisés, formés aux interventions sur différentes marques (Apple, Samsung, etc.) et aux plateformes logicielles spécifiques (Trepidai, Picea Soft).</li>
               <li><strong>Support administratif et logistique :</strong> Gestion des stocks, suivi des interventions et relations clients.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">3. Points forts :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">3. Points forts</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
               <li>Réputation solide dans la réparation électronique</li>
               <li>Certifications et agréments constructeurs (Apple, Samsung…)</li>
@@ -178,7 +178,7 @@ export default function SaveLaDefense() {
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-2">II Missions</h2>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Détails des missions :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Détails des missions</h3>
             <ul className="list-disc list-inside space-y-1 text-gray-700 mb-2">
               <li>Réparation de smartphones, tablettes et ordinateurs.</li>
               <li>Accueil et conseil client pour le choix de produits et services.</li>
@@ -186,13 +186,13 @@ export default function SaveLaDefense() {
               <li>Gestion du matériel et suivi des interventions.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Activités principales :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Activités principales</h3>
             <ul className="list-disc list-inside space-y-1 mb-2">
               <li><strong>Maintenance et assistance technique :</strong> Diagnostic, démontage et réparation d’appareils électroniques.</li>
               <li><strong>Service et support informatique :</strong> Installation, mise à jour et suivi des appareils clients.</li>
             </ul>
 
-            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Technologies utilisées :</h3>
+            <h3 className="text-3xl font-semibold text-blue-800 mb-2">Technologies utilisées</h3>
             <ul className="list-disc list-inside space-y-1">
               <li>Trepidai</li>
               <li>Picea Soft</li>
