@@ -73,26 +73,7 @@ export default function Entreprise() {
         },
       ],
       techno: ["Apple Configurator", "GSX (Apple)", "GSPN (Samsung)", "Trepidai", "Picea Soft"],
-    },
-    {
-      nom: "Dentegen",
-      periode: "Novembre 2025 – Décembre 2025 | Stage pratique",
-      description:
-        "Technicien et assistant administratif dans le secteur médical et technologique.",
-      image: "/dentegen.jpg",
-      details: [
-        "Assistance technique sur appareils médicaux.",
-        "Suivi administratif et gestion du matériel.",
-        "Formation et support auprès des utilisateurs.",
-      ],
-      activites: [
-        {
-          categorie: "Maintenance médicale",
-          contenu: "Réparation et vérification des équipements dentaires et médicaux.",
-        },
-      ],
-      techno: ["DentalSoft", "MedTech Pro"],
-    },
+      },
   ];
 
 const handleEnSavoirPlus = (entreprise) => {
@@ -102,8 +83,6 @@ const handleEnSavoirPlus = (entreprise) => {
     navigate("/save-la-defense");
   } else if (entreprise.nom === "Save Wagram") {
     navigate("/save-wagram");
-  } else if (entreprise.nom === "Dentegen") {
-    navigate("/dentegen");
   } else {
     setEntrepriseActive(entreprise);
   }

@@ -14,7 +14,6 @@ import Contact from "./Components/Contact";
 import ChatBox from "./Components/ChatBox";
 import SaveLaDefense from "./Components/SaveLaDefense";
 import SaveWagram from "./Components/SaveWagram";
-import Dentegen from "./Components/Dentegen";
 import BlediPhone from "./Components/BlediPhone";
 
 // 🔹 Ce composant gère le scroll automatique vers la bonne section
@@ -112,7 +111,6 @@ export default function App() {
             <Route path="/blediphone" element={<BlediPhone />} />
             <Route path="/save-la-defense" element={<SaveLaDefense />} />
             <Route path="/save-wagram" element={<SaveWagram />} />
-            <Route path="/dentegen" element={<Dentegen />} />
           </Routes>
         </main>
 

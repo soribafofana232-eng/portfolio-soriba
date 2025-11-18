@@ -61,13 +61,10 @@ export default function BlediPhone() {
             <li><strong>Forme juridique :</strong> Entreprise individuelle</li>
             <li><strong>Capital :</strong> Non communiqué</li>
             <li><strong>Chiffre d'affaire :</strong> Non communiqué</li>
-            <li><strong>Siège social :</strong> Non communiqué</li>
-            <li><strong>Président :</strong> Non communiqué</li>
+            <li><strong>Siège social :</strong> 139 Rue de l’Épeule</li>
+            <li><strong>Président :</strong> Aucun</li>
             <li><strong>Domaine d'activité :</strong> Vente et réparation de smartphones</li>
-            <li>
-              <strong>Site internet :</strong>{" "}
-              <span className="text-gray-500">Non communiqué</span>
-            </li>
+            <li><strong>Site internet :</strong> Aucun</li>
           </ul>
         </motion.div>
       </div>
