@@ -81,11 +81,24 @@ Le technicien SISR doit maîtriser ces technologies pour concevoir des environne
 
         {/* --- Introduction --- */}
         <p className="text-gray-700 mb-12 leading-relaxed">
-          Ma veille porte sur <strong>la virtualisation des serveurs</strong>.
-          Elle permet d’exécuter plusieurs systèmes sur une seule machine
-          physique. Apparu avec IBM dans les années 1960, le concept s’est
-          démocratisé grâce à VMware et Proxmox, devenant une base essentielle
-          du <strong>cloud computing</strong>.
+          <h1>La veille technologique, élément de la veille stratégique,
+           consiste à surveiller les évolutions techniques, les innovations 
+           dans un secteur d’activité donnée. La veille technologique comprend 
+           notamment la surveillance, la collecte, le partage et la diffusion 
+           d’information permettant d’anticiper ou de s’informer sur des changements 
+           en matière de recherche, développement, brevet, lancement de nouveaux produits, 
+           matériaux, processus, concepts, innovation de fabrication, etc. Cela a pour 
+           but d’évaluer l’impact sur l’environnement et l’organisation.<br/>
+           
+           Ma veille technologiqueporte sur la virtualisation des serveurs consiste à exécuter 
+           plusieurs systèmes d’exploitation sur une seule machine physique grâce à une couche 
+           logicielle appelée hyperviseur. Apparue chez IBM dans les années 1960, cette technologie 
+           s’est largement démocratisée avec l’arrivée de solutions comme VMware, Hyper-V ou Proxmox, 
+           devenant un pilier essentiel du cloud computing moderne. Elle permet non seulement d’optimiser 
+           l’utilisation des ressources matérielles, mais aussi de simplifier la gestion, la 
+           maintenance et la haute disponibilité des infrastructures. De plus, la virtualisation 
+           facilite la mise en place d’environnements isolés et reproductibles, améliorant ainsi 
+           la sécurité et la flexibilité des déploiements.</h1>
         </p>
 
         {/* --- Cartes --- */}

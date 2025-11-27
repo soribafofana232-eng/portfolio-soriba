@@ -54,7 +54,7 @@ export default function Realisations() {
     {
       titre: "Création d'un Portfolio",
       description: "Site personnel déployé sur domaine public avec React et Tailwind.",
-      techno: ["VSCode", "React", "Vite", "Tailwind", "GitHub", "Netlify"],
+      techno: ["VSCode", "React", "Vite", "Tailwind", "Node.js.", "GitHub", "Netlify"],
       image: "/Portfolio.jpg",
       details: [
         "Développement complet du portfolio sur Netlify, avec SEO, responsive design et structure modulaire.",
@@ -74,9 +74,9 @@ export default function Realisations() {
         </motion.h2>
 
         <p className="text-gray-600 mb-12">
-          Découvrez les projets réalisés en autonomie ou dans le cadre de la
-          formation, liés à la conception électronique, à la programmation et à
-          l’innovation technologique.
+          Découvrez les projets réalisés en autonomie ou dans le cadre de mon
+          parcours scolaire, liés à la conception électronique, à la programmation
+          et à l’innovation technologique.
         </p>
 
         {/* --- Cartes --- */}

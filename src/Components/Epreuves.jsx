@@ -131,15 +131,28 @@ export default function Epreuves() {
                   </ul>
                 </div>
 
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.05 }}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
-                >
-                  <FileSpreadsheet className="w-5 h-5" />
-                  Ouvrir le dossier professionnel E6
-                </motion.a>
+                      <motion.a
+                        href="/Fiche 1.pdf"
+                        download
+                        whileHover={{ scale: 1.05 }}
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
+                      >
+                        <FileSpreadsheet className="w-5 h-5" />
+                        Ouvrir la fiche de réalisation professionnel 1
+                      </motion.a> <br /><br />
+
+                      <motion.a
+                        href="/Fiche 2.pdf"
+                        download
+                        whileHover={{ scale: 1.05 }}
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
+                      >
+                        <FileSpreadsheet className="w-5 h-5" />
+                        Ouvrir la fiche de réalisation professionnel 2
+                      </motion.a>
+
               </motion.div>
+              
             )}
           </AnimatePresence>
         </div>
