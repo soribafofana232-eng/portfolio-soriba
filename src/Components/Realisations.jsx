@@ -4,6 +4,7 @@ import { ExternalLink, X } from "lucide-react";
 
 export default function Realisations() {
   const [projetActif, setProjetActif] = useState(null);
+  const [showSkills, setShowSkills] = useState(false);
 
   const projets = [
     {
@@ -47,19 +48,33 @@ export default function Realisations() {
       description: "Site professionnel déployé sur domaine privé.",
       techno: ["base44"],
       image: "/Kaizer-repair.jpg",
-      details: [
-        "Développement de A à Z sur https://kaizer-repair5993.base44.app.",
-      ],
+      details: ["Développement de A à Z sur https://kaizer-repair5993.base44.app."],
     },
     {
       titre: "Création d'un Portfolio",
-      description: "Site personnel déployé sur domaine public avec React et Tailwind.",
+      description:
+        "Site personnel déployé sur domaine public avec React et Tailwind.",
       techno: ["VSCode", "React", "Vite", "Tailwind", "Node.js.", "GitHub", "Netlify"],
       image: "/Portfolio.jpg",
       details: [
         "Développement complet du portfolio sur Netlify, avec SEO, responsive design et structure modulaire.",
       ],
     },
+  ];
+
+  const skills = [
+    { name: "C", icon: "/C.jpg" },
+    { name: "C++", icon: "/C++.jpg" },
+    { name: "Python", icon: "/Python.jpg" },
+    { name: "React (Vite)", icon: "/React (Vite).jpg" },
+    { name: "Tailwind", icon: "/Tailwind.jpg" },
+    { name: "Node.js", icon: "/Node.js.jpg" },
+    { name: "HTML/CSS", icon: "/HTML-CSS.jpg" },
+    { name: "JavaScript", icon: "/Javascript.jpg" },
+    { name: "PHP", icon: "/PHP.jpg" },
+    { name: "MySQL", icon: "/MySQL.jpg" },
+    { name: "Ladder", icon: "/Ladder.jpg" },
+    { name: "Function Block Diagram", icon: "/Fonction Block.jpg" },
   ];
 
   return (
@@ -79,7 +94,6 @@ export default function Realisations() {
           et à l’innovation technologique.
         </p>
 
-        {/* --- Cartes --- */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projets.map((projet, i) => (
             <motion.div
@@ -87,15 +101,9 @@ export default function Realisations() {
               className="bg-gray-50 border border-gray-200 shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition cursor-pointer"
               whileHover={{ scale: 1.02 }}
             >
-              <img
-                src={projet.image}
-                alt={projet.titre}
-                className="w-full h-48 object-cover"
-              />
+              <img src={projet.image} alt={projet.titre} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-blue-800 mb-2">
-                  {projet.titre}
-                </h3>
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{projet.titre}</h3>
                 <p className="text-gray-600 mb-4">{projet.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -120,9 +128,38 @@ export default function Realisations() {
             </motion.div>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          <button
+            onClick={() => setShowSkills(!showSkills)}
+            className="px-6 py-3 bg-blue-700 text-white text-lg rounded-xl shadow hover:bg-blue-800 transition"
+          >
+            Vous souhaitez voir mes compétences informatiques ?
+          </button>
+        </div>
+
+        <AnimatePresence>
+          {showSkills && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6"
+            >
+              {skills.map((skill, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center bg-gray-50 p-4 rounded-xl shadow border"
+                >
+                  <img src={skill.icon} alt={skill.name} className="w-16 h-16 object-contain mb-2" />
+                  <p className="text-blue-800 font-semibold">{skill.name}</p>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
-      {/* --- Modale --- */}
       <AnimatePresence>
         {projetActif && (
           <>
@@ -133,6 +170,7 @@ export default function Realisations() {
               exit={{ opacity: 0 }}
               onClick={() => setProjetActif(null)}
             />
+
             <motion.div
               className="fixed inset-0 flex items-center justify-center z-50 p-4"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -156,16 +194,12 @@ export default function Realisations() {
 
                 <div className="p-6 space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-blue-800">
-                      {projetActif.titre}
-                    </h3>
+                    <h3 className="text-2xl font-bold text-blue-800">{projetActif.titre}</h3>
                     <p className="text-gray-600">{projetActif.description}</p>
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-blue-700 mb-2">
-                      Détails du projet :
-                    </h4>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">Détails du projet :</h4>
                     <ul className="list-disc list-inside text-gray-700 space-y-1">
                       {projetActif.details.map((d, i) => (
                         <li key={i}>{d}</li>
@@ -174,9 +208,7 @@ export default function Realisations() {
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-blue-700 mb-2">
-                      Technologies utilisées :
-                    </h4>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">Technologies utilisées :</h4>
                     <div className="flex flex-wrap gap-2">
                       {projetActif.techno.map((t, idx) => (
                         <span
