@@ -48,7 +48,7 @@ export default function Realisations() {
       description: "Site professionnel déployé sur domaine privé.",
       techno: ["base44"],
       image: "/Kaizer-repair.jpg",
-      details: ["Développement de A à Z sur https://kaizer-repair5993.base44.app."],
+      details: ["Développement de A à Z sur https://kaizer-repair5993.base44.app"],
     },
     {
       titre: "Création d'un Portfolio",

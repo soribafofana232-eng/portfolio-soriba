@@ -10,13 +10,13 @@ export default function Parcours() {
 
       {/* --- CONTENU --- */}
       <div className="max-w-6xl mx-auto relative border-l-2 border-blue-200 pl-8 md:pl-12 space-y-12">
-        {/* 2025 – 2027 */}
+        {/* 2026 – 2028 */}
         <div className="relative">
           <div className="absolute -left-[18px] top-1.5 w-4 h-4 bg-blue-600 rounded-full"></div>
           <h2 className="text-lg font-semibold text-blue-700">
             BTS SIO - Institut IEF2I
           </h2>
-          <p className="text-sm text-gray-500 mb-2">2025 – 2027</p>
+          <p className="text-sm text-gray-500 mb-2">2026 – 2028</p>
           <p className="text-gray-700 leading-relaxed">
             Brevet de Technicien Supérieur en Services Informatiques aux Organisations, 
             spécialité SISR (Solutions d’Infrastructure, Systèmes et Réseaux).
