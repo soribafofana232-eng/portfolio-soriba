@@ -59,7 +59,7 @@ export default function Entreprise() {
       details: [
         "Réparation de smartphones, tablettes et ordinateurs.",
         "Accueil et conseil client pour le choix de produits et services.",
-        "Utilisation des plateformes techniques Apple (GSX) et Samsung (GSPN).",
+        "Utilisation de plateformes techniques internes pour la gestion des réparations.",
         "Gestion du matériel et suivi des interventions.",
       ],
       activites: [
