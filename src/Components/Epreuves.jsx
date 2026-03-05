@@ -6,19 +6,20 @@ export default function Epreuves() {
   const [activeTab, setActiveTab] = useState("E5");
 
   return (
-    <section className="bg-gray-50 min-h-screen py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* TITRE */}
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold text-blue-800 border-l-8 border-blue-600 pl-3 text-left">
-            Mes Épreuves
-          </h1>
-          <p className="text-gray-600 mt-4">
-            Découvrez les épreuves professionnelles réalisées durant ma formation.
-          </p>
-        </div>
+    <section className="bg-gray-50 min-h-screen py-16 px-8 md:px-16">
+      <div className="max-w-6xl mx-auto">
+        <motion.h2
+          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Mes Épreuves
+        </motion.h2>
 
-        {/* Onglets */}
+        <p className="text-gray-600 mb-12">
+          Découvrez les épreuves professionnelles réalisées durant ma formation.
+        </p>
+
         <div className="flex gap-10 border-b border-gray-200 mb-10">
           <button
             onClick={() => setActiveTab("E5")}
@@ -55,10 +56,11 @@ export default function Epreuves() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="text-blue-600 w-7 h-7" />
-                  <h2 className="text-2xl font-semibold text-blue-800 text-left">
+                  <h3 className="text-2xl font-semibold text-blue-800">
                     Présentation de l’épreuve E5
-                  </h2>
+                  </h3>
                 </div>
+
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   L’épreuve E5 « Production et fourniture de services informatiques »
                   évalue la capacité du candidat à produire et fournir des services
@@ -68,9 +70,9 @@ export default function Epreuves() {
                 </p>
 
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-md mb-6">
-                  <h3 className="text-blue-700 font-semibold mb-2 text-left">
+                  <h4 className="text-blue-700 font-semibold mb-2">
                     Compétences évaluées :
-                  </h3>
+                  </h4>
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
                     <li>Gérer le patrimoine informatique</li>
                     <li>Répondre aux incidents et aux demandes d’assistance</li>
@@ -105,9 +107,9 @@ export default function Epreuves() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="text-blue-600 w-7 h-7" />
-                  <h2 className="text-2xl font-semibold text-blue-800 text-left">
+                  <h3 className="text-2xl font-semibold text-blue-800">
                     Présentation de l’épreuve E6
-                  </h2>
+                  </h3>
                 </div>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -118,9 +120,9 @@ export default function Epreuves() {
                 </p>
 
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-md mb-6">
-                  <h3 className="text-blue-700 font-semibold mb-2 text-left">
+                  <h4 className="text-blue-700 font-semibold mb-2">
                     Compétences évaluées :
-                  </h3>
+                  </h4>
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
                     <li>Analyser et formaliser des expériences professionnelles</li>
                     <li>Présenter un dossier professionnel structuré</li>
