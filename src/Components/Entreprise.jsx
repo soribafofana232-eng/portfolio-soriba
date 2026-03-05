@@ -89,10 +89,10 @@ export default function Entreprise() {
   };
 
   return (
-    <section id="entreprise" className="py-20 px-10 bg-white text-gray-900 ml-6">
+    <section id="entreprise" className="py-20 px-8 md:px-16 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto">
         <motion.h2
-          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3 text-left"
+          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -116,9 +116,7 @@ export default function Entreprise() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-blue-800 mb-1 text-left">
-                  {entreprise.nom}
-                </h3>
+                <h3 className="text-xl font-semibold text-blue-800 mb-1">{entreprise.nom}</h3>
                 <p className="text-gray-500 text-sm mb-2">{entreprise.periode}</p>
                 <p className="text-gray-600 mb-4 text-sm">{entreprise.description}</p>
 
@@ -170,11 +168,11 @@ export default function Entreprise() {
                 </div>
 
                 <div className="p-6 overflow-y-auto flex-1 space-y-6">
-                  <h3 className="text-2xl font-bold text-blue-800 text-left">{entrepriseActive.nom}</h3>
+                  <h3 className="text-2xl font-bold text-blue-800">{entrepriseActive.nom}</h3>
                   <p className="text-gray-500">{entrepriseActive.periode}</p>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-blue-700 mb-2 text-left">Détails</h4>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">Détails</h4>
                     <ul className="list-disc list-inside text-gray-700 space-y-1">
                       {entrepriseActive.details.map((d, i) => (
                         <li key={i}>{d}</li>
