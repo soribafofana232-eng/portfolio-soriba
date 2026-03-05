@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Veille() {
   const articles = [
@@ -68,42 +68,21 @@ Le technicien SISR doit maîtriser ces technologies pour concevoir des environne
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section id="veille" className="py-20 px-6 bg-white text-gray-900">
-      <div className="max-w-6xl mx-auto ml-6 sm:ml-10">
-        {/* TITRE */}
+    <section id="veille" className="py-20 px-8 md:px-16 bg-white text-gray-900">
+      <div className="max-w-6xl mx-auto">
         <motion.h2
-          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3 text-left"
+          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
           Ma Veille Technologique
         </motion.h2>
 
-        {/* Introduction */}
-        <p className="text-gray-700 mb-12 leading-relaxed text-left">
-          <h1>
-            La veille technologique, élément de la veille stratégique,
-            consiste à surveiller les évolutions techniques, les innovations 
-            dans un secteur d’activité donnée. La veille technologique comprend 
-            notamment la surveillance, la collecte, le partage et la diffusion 
-            d’information permettant d’anticiper ou de s’informer sur des changements 
-            en matière de recherche, développement, brevet, lancement de nouveaux produits, 
-            matériaux, processus, concepts, innovation de fabrication, etc. Cela a pour 
-            but d’évaluer l’impact sur l’environnement et l’organisation.<br/>
-            
-            Ma veille technologique portant sur la virtualisation des serveurs consiste à exécuter 
-            plusieurs systèmes d’exploitation sur une seule machine physique grâce à une couche 
-            logicielle appelée hyperviseur. Apparue chez IBM dans les années 1960, cette technologie 
-            s’est largement démocratisée avec l’arrivée de solutions comme VMware, Hyper-V ou Proxmox, 
-            devenant un pilier essentiel du cloud computing moderne. Elle permet non seulement d’optimiser 
-            l’utilisation des ressources matérielles, mais aussi de simplifier la gestion, la 
-            maintenance et la haute disponibilité des infrastructures. De plus, la virtualisation 
-            facilite la mise en place d’environnements isolés et reproductibles, améliorant ainsi 
-            la sécurité et la flexibilité des déploiements.
-          </h1>
+        <p className="text-gray-700 mb-12 leading-relaxed">
+          La veille technologique consiste à surveiller les évolutions techniques et les innovations dans un secteur donné. Elle comprend la collecte, le partage et la diffusion d’informations pour anticiper les changements.
+          Ma veille porte sur la virtualisation des serveurs, permettant d’exécuter plusieurs systèmes d’exploitation sur une seule machine physique grâce à un hyperviseur. Apparue chez IBM dans les années 1960, cette technologie s’est démocratisée avec VMware, Hyper-V ou Proxmox. Elle optimise les ressources matérielles, simplifie la gestion, la maintenance et la haute disponibilité, et permet des environnements isolés et sécurisés.
         </p>
 
-        {/* Cartes */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((article, i) => (
             <motion.div
@@ -116,23 +95,23 @@ Le technicien SISR doit maîtriser ces technologies pour concevoir des environne
                 alt={article.titre}
                 className="w-20 h-20 mb-4 object-contain"
               />
-              <h3 className="text-lg font-semibold text-blue-800 mb-3 text-left">
+              <h3 className="text-lg font-semibold text-blue-800 mb-3 text-center">
                 {article.titre}
               </h3>
 
-              {/* Bouton "En savoir plus" */}
               <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                onClick={() =>
+                  setOpenIndex(openIndex === i ? null : i)
+                }
                 className="px-4 py-2 text-sm bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition"
               >
                 {openIndex === i ? "Fermer" : "En savoir plus"}
               </button>
 
-              {/* Contenu déroulant */}
               <AnimatePresence>
                 {openIndex === i && (
                   <motion.p
-                    className="text-gray-700 text-sm whitespace-pre-line leading-relaxed mt-4 text-left"
+                    className="text-gray-700 text-sm whitespace-pre-line leading-relaxed mt-4 text-center"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
