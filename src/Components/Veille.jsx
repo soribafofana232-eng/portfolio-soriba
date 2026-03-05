@@ -69,7 +69,7 @@ Le technicien SISR doit maîtriser ces technologies pour concevoir des environne
 
   return (
     <section id="veille" className="py-20 px-6 bg-white text-gray-900">
-      <div className="max-w-6xl mx-auto ml-6 sm:ml-10">
+      <div className="max-w-6xl mx-auto">
         {/* --- Titre --- */}
         <motion.h2
           className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
