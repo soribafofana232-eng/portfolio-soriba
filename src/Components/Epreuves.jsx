@@ -7,11 +7,10 @@ export default function Epreuves() {
 
   return (
     <section className="bg-gray-50 min-h-screen py-16">
-      {/* Conteneur centré global */}
       <div className="max-w-6xl mx-auto px-6">
-        {/* --- Titre principal avec barre à gauche --- */}
+        {/* TITRE */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-blue-800 border-l-8 border-blue-600 pl-3">
+          <h1 className="text-4xl font-bold text-blue-800 border-l-8 border-blue-600 pl-3 text-left">
             Mes Épreuves
           </h1>
           <p className="text-gray-600 mt-4">
@@ -19,7 +18,7 @@ export default function Epreuves() {
           </p>
         </div>
 
-        {/* --- Onglets de navigation --- */}
+        {/* Onglets */}
         <div className="flex gap-10 border-b border-gray-200 mb-10">
           <button
             onClick={() => setActiveTab("E5")}
@@ -43,7 +42,6 @@ export default function Epreuves() {
           </button>
         </div>
 
-        {/* --- Contenu centré --- */}
         <div>
           <AnimatePresence mode="wait">
             {activeTab === "E5" && (
@@ -57,11 +55,10 @@ export default function Epreuves() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="text-blue-600 w-7 h-7" />
-                  <h2 className="text-2xl font-semibold text-blue-800">
+                  <h2 className="text-2xl font-semibold text-blue-800 text-left">
                     Présentation de l’épreuve E5
                   </h2>
                 </div>
-
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   L’épreuve E5 « Production et fourniture de services informatiques »
                   évalue la capacité du candidat à produire et fournir des services
@@ -71,7 +68,7 @@ export default function Epreuves() {
                 </p>
 
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-md mb-6">
-                  <h3 className="text-blue-700 font-semibold mb-2">
+                  <h3 className="text-blue-700 font-semibold mb-2 text-left">
                     Compétences évaluées :
                   </h3>
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
@@ -108,7 +105,7 @@ export default function Epreuves() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="text-blue-600 w-7 h-7" />
-                  <h2 className="text-2xl font-semibold text-blue-800">
+                  <h2 className="text-2xl font-semibold text-blue-800 text-left">
                     Présentation de l’épreuve E6
                   </h2>
                 </div>
@@ -121,7 +118,7 @@ export default function Epreuves() {
                 </p>
 
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-md mb-6">
-                  <h3 className="text-blue-700 font-semibold mb-2">
+                  <h3 className="text-blue-700 font-semibold mb-2 text-left">
                     Compétences évaluées :
                   </h3>
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
@@ -131,28 +128,26 @@ export default function Epreuves() {
                   </ul>
                 </div>
 
-                      <motion.a
-                        href="/Fiche 1.pdf"
-                        download
-                        whileHover={{ scale: 1.05 }}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
-                      >
-                        <FileSpreadsheet className="w-5 h-5" />
-                        Ouvrir la fiche de réalisation professionnel 1
-                      </motion.a> <br /><br />
-
-                      <motion.a
-                        href="/Fiche 2.pdf"
-                        download
-                        whileHover={{ scale: 1.05 }}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
-                      >
-                        <FileSpreadsheet className="w-5 h-5" />
-                        Ouvrir la fiche de réalisation professionnel 2
-                      </motion.a>
-
+                <motion.a
+                  href="/Fiche 1.pdf"
+                  download
+                  whileHover={{ scale: 1.05 }}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
+                >
+                  <FileSpreadsheet className="w-5 h-5" />
+                  Ouvrir la fiche de réalisation professionnel 1
+                </motion.a>
+                <br /><br />
+                <motion.a
+                  href="/Fiche 2.pdf"
+                  download
+                  whileHover={{ scale: 1.05 }}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
+                >
+                  <FileSpreadsheet className="w-5 h-5" />
+                  Ouvrir la fiche de réalisation professionnel 2
+                </motion.a>
               </motion.div>
-              
             )}
           </AnimatePresence>
         </div>

@@ -81,7 +81,7 @@ export default function Realisations() {
     <section id="realisations" className="py-20 px-8 md:px-16 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto">
         <motion.h2
-          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3"
+          className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3 text-left"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -103,7 +103,7 @@ export default function Realisations() {
             >
               <img src={projet.image} alt={projet.titre} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-blue-800 mb-2">{projet.titre}</h3>
+                <h3 className="text-xl font-semibold text-blue-800 mb-2 text-left">{projet.titre}</h3>
                 <p className="text-gray-600 mb-4">{projet.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -194,12 +194,12 @@ export default function Realisations() {
 
                 <div className="p-6 space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-blue-800">{projetActif.titre}</h3>
+                    <h3 className="text-2xl font-bold text-blue-800 text-left">{projetActif.titre}</h3>
                     <p className="text-gray-600">{projetActif.description}</p>
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-blue-700 mb-2">Détails du projet :</h4>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2 text-left">Détails du projet :</h4>
                     <ul className="list-disc list-inside text-gray-700 space-y-1">
                       {projetActif.details.map((d, i) => (
                         <li key={i}>{d}</li>
@@ -208,7 +208,7 @@ export default function Realisations() {
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-blue-700 mb-2">Technologies utilisées :</h4>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2 text-left">Technologies utilisées :</h4>
                     <div className="flex flex-wrap gap-2">
                       {projetActif.techno.map((t, idx) => (
                         <span

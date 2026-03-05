@@ -37,26 +37,24 @@ export default function Contact() {
 
   return (
     <section className="min-h-screen bg-gray-50 text-gray-800 p-8 md:p-16">
-      {/* --- TITRE --- */}
       <div className="max-w-6xl mx-auto mb-10">
-        <h1           className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3">
+        <h1 className="text-4xl font-bold text-blue-900 mb-4 border-l-8 border-blue-600 pl-3 text-left">
           Contact
         </h1>
-        <p className="text-gray-600 mt-4">
+        <p className="text-gray-600 mt-4 text-left">
           N’hésitez pas à m’envoyer un message ou à consulter mes coordonnées.
         </p>
       </div>
 
-      {/* --- CONTENU PRINCIPAL --- */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-        {/* FORMULAIRE DE CONTACT */}
+        {/* FORMULAIRE */}
         <motion.div
           className="bg-white shadow-md rounded-xl border border-gray-100 p-8"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl font-semibold text-indigo-800 mb-6">
+          <h2 className="text-2xl font-semibold text-indigo-800 mb-6 text-left">
             Envoyez-moi un message
           </h2>
 
@@ -68,9 +66,7 @@ export default function Contact() {
           >
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-600 mb-1">
-                  Nom et prénom
-                </label>
+                <label className="block text-sm font-medium text-gray-600 mb-1">Nom et prénom</label>
                 <input
                   type="text"
                   name="name"
@@ -81,9 +77,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-600 mb-1">
-                  Email
-                </label>
+                <label className="block text-sm font-medium text-gray-600 mb-1">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -95,9 +89,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-600 mb-1">
-                Message
-              </label>
+              <label className="block text-sm font-medium text-gray-600 mb-1">Message</label>
               <textarea
                 name="message"
                 placeholder="Expliquez-moi votre besoin ou votre message ici..."
@@ -134,37 +126,19 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
         >
           <div className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-8 rounded-xl shadow-md">
-            <h2 className="text-xl font-semibold mb-4">Coordonnées</h2>
-
+            <h2 className="text-xl font-semibold mb-4 text-left">Coordonnées</h2>
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <MapPin size={20} />
-                <span>Saint-Denis, France</span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <Mail size={20} />
-                <a
-                  href="mailto:soribafofana232@gmail.com"
-                  className="hover:underline"
-                >
-                  soribafofana232@gmail.com
-                </a>
-              </div>
-
+              <div className="flex items-center gap-3"><MapPin size={20} /> <span>Saint-Denis, France</span></div>
+              <div className="flex items-center gap-3"><Mail size={20} /> <a href="mailto:soribafofana232@gmail.com" className="hover:underline">soribafofana232@gmail.com</a></div>
               <div className="mt-4">
-                <h3 className="text-sm uppercase text-indigo-100 font-semibold mb-1">
-                  Disponibilité
-                </h3>
-                <p className="bg-indigo-500/40 px-4 py-2 rounded-lg inline-block text-sm font-medium">
-                  24h/24, 7j/7
-                </p>
+                <h3 className="text-sm uppercase text-indigo-100 font-semibold mb-1">Disponibilité</h3>
+                <p className="bg-indigo-500/40 px-4 py-2 rounded-lg inline-block text-sm font-medium">24h/24, 7j/7</p>
               </div>
             </div>
           </div>
 
           <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
-            <h3 className="text-indigo-800 font-semibold mb-3">Réseaux sociaux</h3>
+            <h3 className="text-indigo-800 font-semibold mb-3 text-left">Réseaux sociaux</h3>
             <a
               href="https://www.linkedin.com/in/soriba-fofana-9a33b6284/"
               target="_blank"
