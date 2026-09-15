@@ -12,7 +12,7 @@ export default function Parcours() {
           {
             titre: "Formation RNCP38718 - Tele Pop Music",
             periode: "août 2024 – avril 2026",
-            desc: "Diplôme reconnu par l’État, axé sur la réparation, le reconditionnement et la vente de produits électroménagers en cours d'obtention."
+            desc: "Diplôme reconnu par l’État, axé sur la réparation, le reconditionnement et la vente de produits électroménagers obtenu."
           },
           {
             titre: "BUT GEII - IUT de Cachan",
@@ -22,12 +22,12 @@ export default function Parcours() {
           {
             titre: "BAC STI2D - Lycée Colbert",
             periode: "septembre 2021 – juillet 2023",
-            desc: "Baccalauréat Sciences et Technologies de l’Industrie et du Développement Durable, spécialité Innovation Technologique et Éco-conception (ITEC)."
+            desc: "Baccalauréat Sciences et Technologies de l’Industrie et du Développement Durable, spécialité Innovation Technologique et Éco-conception (ITEC) obtenu."
           },
           {
             titre: "Brevet des collèges - Collège Maxence Van Der Meersch",
             periode: "septembre 2016 – juillet 2020",
-            desc: "Brevet des collèges Mention Bien."
+            desc: "Brevet des collèges obtenu avec Mention Bien."
           }
         ].map((item, i) => (
           <div className="relative" key={i}>

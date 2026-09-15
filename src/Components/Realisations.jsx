@@ -60,6 +60,16 @@ export default function Realisations() {
         "Développement complet du portfolio sur Netlify, avec SEO, responsive design et structure modulaire.",
       ],
     },
+        {
+      titre: "Projet : Virtualisation d'une infrastructure",
+      description:
+        "Déploiement et Administration d'un environnement  Active Directory ",
+      techno: ["Windows Server 2022", "Wundows 10 et 11","Active Directory", "DNS", "DHCP", "GPO", "NTFS"],
+      image: "/projet-vmware.jpg",
+      details: [
+        "Réaliser un projet consistant à déployer et administrer une infrastructure Windows Server 2022 dans un environnement virtualisé",
+      ],
+    },
   ];
 
   const skills = [
