@@ -12,7 +12,7 @@ export default function Parcours() {
           {
             titre: "BTS SIO - Ecole Schola Nova",
             periode: "août 2024 – avril 2026",
-            desc: "Brevet Technicien Supérieur en Services Informatiques aux Organisations option SISR(Solutions d'Infrastructure Systèmes et Réseaux) ."
+            desc: "Brevet Technicien Supérieur en Services Informatiques aux Organisations option SISR(Solutions d'Infrastructure Systèmes et Réseaux)."
           },
           {
             titre: "Formation RNCP38718 - Tele Pop Music",
