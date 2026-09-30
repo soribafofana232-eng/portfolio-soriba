@@ -10,6 +10,11 @@ export default function Parcours() {
       <div className="max-w-6xl mx-auto relative border-l-2 border-blue-200 pl-8 md:pl-12 space-y-12">
         {[
           {
+            titre: "BTS SIO - Ecole Schola Nova",
+            periode: "août 2024 – avril 2026",
+            desc: "Brevet Technicien Supérieur en Services Informatiques aux Organisations option SISR(Solutions d'Infrastructure Systèmes et Réseaux) ."
+          },
+          {
             titre: "Formation RNCP38718 - Tele Pop Music",
             periode: "août 2024 – avril 2026",
             desc: "Diplôme reconnu par l’État, axé sur la réparation, le reconditionnement et la vente de produits électroménagers obtenu."
