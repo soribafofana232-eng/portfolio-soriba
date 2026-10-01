@@ -60,7 +60,7 @@ export default function Realisations() {
         "Développement complet du portfolio sur Netlify, avec SEO, responsive design et structure modulaire.",
       ],
     },
-        {
+    {
       titre: "Projet : Virtualisation d'une infrastructure",
       description:
         "Déploiement et Administration d'un environnement  Active Directory ",
@@ -68,6 +68,16 @@ export default function Realisations() {
       image: "/projet-vmware.jpg",
       details: [
         "Réaliser un projet consistant à déployer et administrer une infrastructure Windows Server 2022 dans un environnement virtualisé",
+      ],
+    },
+    {
+      titre: "Projet : Cisco NetworkLab — Réseau multi-sites",
+      description:
+        "Infrastructure Réseau Sécurisée Multi-Sites",
+      techno: ["Cisco Packet Tracer","VLAN","Routage","ACL","Sécurisation réseau"],
+      image: "/projet-cisco.png",
+      details: [
+        "Conception et configuration d’une infrastructure réseau multi-sites avec Cisco Packet Tracer : adressage IP, VLAN, routage et sécurisation des communications.",
       ],
     },
   ];
