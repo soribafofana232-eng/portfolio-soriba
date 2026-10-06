@@ -15,6 +15,7 @@ import ChatBox from "./Components/ChatBox";
 import SaveLaDefense from "./Components/SaveLaDefense";
 import SaveWagram from "./Components/SaveWagram";
 import BlediPhone from "./Components/BlediPhone";
+import Sosmaster from "./Components/Sosmaster";
 
 // 🔹 Ce composant gère le scroll automatique vers la bonne section
 function ScrollToHashElement() {
@@ -111,6 +112,7 @@ export default function App() {
             <Route path="/blediphone" element={<BlediPhone />} />
             <Route path="/save-la-defense" element={<SaveLaDefense />} />
             <Route path="/save-wagram" element={<SaveWagram />} />
+            <Route path="/sosmaster" element={<Sosmaster />} />
           </Routes>
         </main>
 

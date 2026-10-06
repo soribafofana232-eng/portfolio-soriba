@@ -74,6 +74,35 @@ export default function Entreprise() {
       ],
       techno: ["Apple Configurator", "GSX (Apple)", "GSPN (Samsung)", "Trepidai", "Picea Soft"],
     },
+    {
+      nom: "SOS MASTER",
+      periode: "Octobre 2026 – Octobre 2027 | Contrat d’apprentissage",
+      description:
+        "Vendeur et technicien spécialisé dans la réparation et le service client au sein d’un environnement technologique exigeant.",
+      image: "/sosmaster.jpg",
+      details: [
+        "Réparation de smartphones, tablettes et ordinateurs.",
+      ],
+      activites: [
+        {
+          categorie: "Installation et configuration informatique",
+          contenu: "Installation et configuration de postes Windows et macOS, mise à jour des systèmes, installation de logiciels et préparation des équipements pour les clients.",
+        },
+        {
+          categorie: "Installation et maintenance réseau",
+          contenu: "Installation de solutions Wi-Fi professionnelles Ubiquiti UniFi, raccordement réseau, câblage, brassage et participation aux interventions sur des infrastructures fibre pour les entreprises.",
+        },
+        {
+          categorie: "Installation de solutions professionnelles",
+          contenu: "Installation et mise en service de caméras de surveillance, systèmes de contrôle d’accès et écrans LED professionnels.",
+        },
+        {
+          categorie: "Maintenance et assistance",
+          contenu: "Diagnostic, maintenance et résolution de problèmes matériels ou logiciels, avec intervention et assistance auprès des clients professionnels.",
+        },
+      ],
+      techno: [""],
+    },
   ];
 
   const handleEnSavoirPlus = (entreprise) => {
@@ -83,6 +112,8 @@ export default function Entreprise() {
       navigate("/save-la-defense");
     } else if (entreprise.nom === "Save Wagram") {
       navigate("/save-wagram");
+    } else if (entreprise.nom === "SOS MASTER") {
+      navigate("/sosmaster");
     } else {
       setEntrepriseActive(entreprise);
     }
