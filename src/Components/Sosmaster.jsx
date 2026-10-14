@@ -141,17 +141,28 @@ export default function Sosmaster() {
 
             <h3 className="text-3xl font-semibold text-blue-800 mb-2">1. Fonctionnement</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
-              <li><strong></strong> </li>
+              <li><strong>Accueil client :</strong> SOSmaster intervient dans la maintenance et le dépannage informatique, notamment pour l'installation, la configuration et la remise en service des équipements.</li>
+              <li><strong>Service technique :</strong> SOSmaster Pro conçoit, installe et maintient des infrastructures réseau professionnelles, comprenant le câblage, les baies de brassage, les switches, les routeurs et les solutions Wi-Fi Ubiquiti UniFi.</li>
+              <li><strong>Réparation et maintenance :</strong> L'entreprise installe des systèmes de vidéosurveillance, des caméras IP et des solutions de contrôle d'accès pour les professionnels.</li>
+              <li><strong>Recyclage et gestion des pièces :</strong> Elle accompagne les entreprises, hôtels et commerces dans le diagnostic des incidents, le dépannage informatique et la maintenance de leurs infrastructures.</li>
             </ul>
 
             <h3 className="text-3xl font-semibold text-blue-800 mb-2">2. Organisation interne</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
-              <li></li>
+              <li><strong>Direction :</strong>  L'entreprise SOS MASTER est une société par actions simplifiée (SAS), spécialisée notamment dans les prestations de services informatiques et la vente de matériel informatique.</li>
+              <li><strong>Équipe technique :</strong>  Les techniciens interviennent sur les équipements informatiques, les infrastructures réseau, les solutions Wi-Fi professionnelles et les systèmes de sécurité connectés.</li>
+              <li><strong>Interventions chez les clients :</strong> Les équipes réalisent des installations, des configurations, des opérations de maintenance et des dépannages sur site ou à distance.</li>
+              <li><strong>Gestion des interventions :</strong> Les prestations nécessitent l'identification des besoins, la préparation du matériel, les tests de fonctionnement et le suivi technique des installations.</li>
             </ul>
 
             <h3 className="text-3xl font-semibold text-blue-800 mb-2">3. Points forts</h3>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700">
-              <li></li>
+              <li>Expertise en infrastructures informatiques et réseaux professionnels.</li>
+              <li>Spécialisation dans les solutions Ubiquiti UniFi.</li>
+              <li>Installation de réseaux Wi-Fi, de caméras IP et de systèmes de contrôle d'accès.</li>
+              <li>Accompagnement des entreprises, hôtels, commerces et bureaux.</li>
+              <li>Maintenance et dépannage informatique sur site ou à distance.</li>
+              <li>Approche globale permettant de centraliser le réseau, la connectivité et la sécurité des équipements.</li>
             </ul>
           </div>
         </section>
