@@ -76,7 +76,7 @@ export default function Entreprise() {
     },
     {
       nom: "SOS MASTER",
-      periode: "Octobre 2026 – Octobre 2027 | Contrat d’apprentissage",
+      periode: "Octobre 2026 – Août 2028 | Contrat d’apprentissage",
       description:
         "Vendeur et technicien spécialisé dans la réparation et le service client au sein d’un environnement technologique exigeant.",
       image: "/sosmaster.jpg",

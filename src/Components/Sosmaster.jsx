@@ -164,17 +164,25 @@ export default function Sosmaster() {
 
             <h3 className="text-3xl font-semibold text-blue-800 mb-2">Détails des missions</h3>
             <ul className="list-disc list-inside space-y-1 text-gray-700 mb-2">
-              <li></li>
+              <li>Réparation de smartphones, tablettes et ordinateurs.</li>
+              <li>Installation et configuration des systèmes d'exploitation.</li>
+              <li>Maintenance des équipements et assistance aux utilisateurs.</li>
+              <li>Installation et configuration des réseaux professionnels.</li>
+
             </ul>
 
             <h3 className="text-3xl font-semibold text-blue-800 mb-2">Activités principales</h3>
-            <ul className="list-disc list-inside space-y-1 mb-2">
-              <li><strong>Installation et configuration informatique :</strong> Installation et configuration de postes Windows et macOS, mise à jour des systèmes, installation de logiciels et préparation des équipements pour les clients.</li>
-              <li><strong>Installation et maintenance réseau :</strong> Installation de solutions Wi-Fi professionnelles Ubiquiti UniFi, raccordement réseau, câblage, brassage et participation aux interventions sur des infrastructures fibre pour les entreprises.</li>
-              <li><strong>Installation de solutions professionnelles :</strong> Installation et mise en service de caméras de surveillance, systèmes de contrôle d’accès et écrans LED professionnels.</li>
-              <li><strong>Maintenance et assistance :</strong> "Diagnostic, maintenance et résolution de problèmes matériels ou logiciels, avec intervention et assistance auprès des clients professionnels.</li>
-            </ul>
-
+            
+<ul className="list-disc list-inside space-y-1 mb-2">
+              <li><strong>Réparation de téléphones et de tablettes :</strong> remplacement des écrans, batteries et composants défectueux ; diagnostic des pannes ; tests après réparation ; sauvegarde et transfert de données. </li>
+              <li><strong>Maintenance des ordinateurs :</strong> installation de Windows, configuration des pilotes et logiciels, remplacement de composants, diagnostic des pannes et sécurisation des postes. </li>
+              <li><strong>Dépannage et assistance informatique :</strong> installation des périphériques, résolution des incidents matériels et logiciels, assistance aux utilisateurs et maintenance préventive. </li>
+              <li><strong>Maintenance et assistance :</strong> assistance aux utilisateurs, dépannage matériel et logiciel, résolution des problèmes réseau et Wi-Fi, maintenance des équipements et documentation des interventions. </li>
+              <li><strong>Installation et configuration des réseaux :</strong> câblage RJ45, installation de switches, routeurs et bornes Wi-Fi, raccordement et diagnostic réseau. </li>
+              <li><strong>Administration des réseaux professionnels :</strong> configuration des équipements UniFi, réseaux Wi-Fi, VLAN et vérification de la sécurité des infrastructures. </li>
+              <li><strong>Vidéosurveillance et contrôle d'accès :</strong> installation de caméras IP, configuration des systèmes de surveillance et mise en service des lecteurs de badges. </li>
+              <li><strong>Maintenance et sécurité des infrastructures :</strong> tests après intervention, maintenance préventive et corrective, documentation technique et vérification des accès. </li>
+            </ul> 
             <h3 className="text-3xl font-semibold text-blue-800 mb-2">Technologies utilisées</h3>
             <ul className="list-disc list-inside space-y-1">
               <li></li>
